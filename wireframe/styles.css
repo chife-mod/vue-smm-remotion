@@ -1,0 +1,854 @@
+/* ════════════════════════════════════════════════════════════════
+   VUE SMM — Wireframe v1
+   Mood reference: deep teal × neon-mint glow × cinematic NYC night
+   Type: Inter (per client brand)
+   Icons: Lucide (initialized via lucide.createIcons() at the end of body)
+   Slide native size: 1080 × 1350 (LinkedIn 4:5 portrait, per brief)
+   ──────────────────────────────────────────────────────────── */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* — Wireframe page chrome — */
+  --bg-page:        #050E0E;        /* deepest — outside any slide  */
+  --bg-nav:         #081414;        /* left sticky nav              */
+  --bg-notes:       #0A1A1A;        /* notes panel surface          */
+  --bg-card:        #0E2424;        /* lifted cards inside notes    */
+
+  /* — Slide canvas (mock surface for the 1080×1350 deliverable) — */
+  --slide-bg:       #0A1F1F;        /* matches moodboard            */
+  --slide-bg-2:     #0D2828;        /* gradient companion           */
+  --slide-ink:      #F0F5F2;        /* slide headlines              */
+  --slide-ink-mute: rgba(240,245,242,0.62);
+
+  /* — Brand accents (from moodboard) — */
+  --neon:           #00FFA3;        /* glowing brand signal         */
+  --neon-soft:      rgba(0, 255, 163, 0.32);
+  --neon-dim:       rgba(0, 255, 163, 0.16);
+  --jade:           #4DD5A5;        /* body emphasis green          */
+  --mint-mute:      #87A8A0;        /* secondary body               */
+  --sapphire:       #2962FF;        /* dashboard data accent        */
+  --amber:          #D49E64;        /* mood-tag tint                */
+  --rose:           #BE5050;        /* anti-tag / warning           */
+
+  /* — Type, on dark — */
+  --ink:            #F5F8F6;
+  --ink-mute:       rgba(245,248,246,0.68);
+  --ink-faint:      rgba(245,248,246,0.38);
+
+  /* — Lines — */
+  --rule:           rgba(0, 255, 163, 0.12);
+  --rule-strong:    rgba(0, 255, 163, 0.28);
+  --rule-soft:      rgba(255,255,255,0.06);
+
+  /* — Layout — */
+  --deck-zoom:      0.42;             /* 1080 × 0.42 = 453px visible  */
+  --nav-w:          280px;
+  --notes-w:        380px;
+  --gap-col:        40px;
+  --gap-row:        96px;
+  --page-pad:       40px;
+
+  /* — Radii — */
+  --r-sm:  6px;
+  --r-md:  10px;
+  --r-lg:  16px;
+  --r-xl:  22px;
+  --r-pill: 999px;
+}
+
+html, body {
+  background: var(--bg-page);
+  min-height: 100%;
+  color: var(--ink);
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-feature-settings: "cv11", "ss01", "ss03";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.005em;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ════════════════════════════════════════════════════════════════
+   Page shell — 2-column grid: sticky slide-nav + scrollable deck
+   ──────────────────────────────────────────────────────────── */
+
+.page {
+  display: grid;
+  grid-template-columns: var(--nav-w) 1fr;
+  align-items: start;
+  min-height: 100vh;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   Left nav — slide list, grouped by Post
+   ──────────────────────────────────────────────────────────── */
+
+.slide-nav {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  height: 100vh;
+  padding: 32px 22px 56px;
+  background: var(--bg-nav);
+  overflow-y: auto;
+  border-right: 1px solid var(--rule);
+  scrollbar-width: thin;
+  scrollbar-color: var(--rule-strong) transparent;
+}
+
+.slide-nav::-webkit-scrollbar { width: 6px; }
+.slide-nav::-webkit-scrollbar-thumb { background: var(--rule-strong); border-radius: 999px; }
+.slide-nav::-webkit-scrollbar-track { background: transparent; }
+
+.slide-nav__brand {
+  margin-bottom: 28px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.slide-nav__brand-mark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.slide-nav__brand-mark::after {
+  content: "";
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--neon);
+  box-shadow: 0 0 12px var(--neon-soft);
+}
+
+.slide-nav__brand-sub {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mint-mute);
+}
+
+.slide-nav__group { margin-bottom: 20px; }
+.slide-nav__group-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--neon);
+  padding: 6px 10px;
+  margin-bottom: 4px;
+}
+.slide-nav__group-label .count {
+  color: var(--mint-mute);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.slide-nav__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.slide-nav__link {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 10px;
+  align-items: baseline;
+  padding: 8px 10px;
+  border-radius: var(--r-sm);
+  color: var(--ink-mute);
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  line-height: 1.35;
+  transition: background 140ms ease, color 140ms ease;
+}
+.slide-nav__link__num {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--ink-faint);
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+.slide-nav__link:hover { background: rgba(0,255,163,0.06); color: var(--ink); }
+.slide-nav__link.is-active {
+  background: rgba(0,255,163,0.10);
+  color: var(--neon);
+}
+.slide-nav__link.is-active .slide-nav__link__num { color: var(--neon); }
+
+/* ════════════════════════════════════════════════════════════════
+   Deck — vertical stream of slide rows
+   ──────────────────────────────────────────────────────────── */
+
+.deck {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-row);
+  padding: var(--page-pad);
+  min-width: 0;
+}
+
+/* — Section header before each post — */
+.post-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 0 8px 0;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 12px;
+  max-width: 1200px;
+}
+.post-header__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--neon);
+}
+.post-header__eyebrow::before {
+  content: "";
+  width: 22px; height: 1px;
+  background: var(--neon);
+  display: inline-block;
+}
+.post-header__title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  line-height: 1.15;
+}
+.post-header__sub {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--ink-mute);
+  line-height: 1.55;
+  max-width: 720px;
+}
+
+/* — Full client caption (the unedited LinkedIn post copy) — */
+.post-caption {
+  margin-top: 14px;
+  padding: 18px 22px;
+  background: var(--bg-notes);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-md);
+  max-width: 820px;
+}
+.post-caption__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mint-mute);
+  margin-bottom: 12px;
+}
+.post-caption__body p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink-mute);
+  margin-bottom: 8px;
+}
+.post-caption__body p:last-child { margin-bottom: 0; }
+.post-caption__hashtags {
+  margin-top: 12px;
+  font-size: 12.5px;
+  color: var(--jade);
+  letter-spacing: 0.01em;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   Slide row — slide canvas + notes side panel
+   ──────────────────────────────────────────────────────────── */
+
+.slide-row {
+  display: grid;
+  grid-template-columns: auto var(--notes-w);
+  align-items: start;
+  column-gap: var(--gap-col);
+  row-gap: 14px;
+}
+
+.slide-row__label {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 4px;
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.slide-row__label__num {
+  color: var(--neon);
+  font-weight: 700;
+}
+.slide-row__label__dot {
+  width: 4px; height: 4px;
+  background: var(--ink-faint);
+  border-radius: 50%;
+}
+.slide-row__label__spec {
+  margin-left: auto;
+  color: var(--ink-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   Slide canvas — 1080 × 1350 native, zoomed in browser
+   ──────────────────────────────────────────────────────────── */
+
+.slide {
+  position: relative;
+  width: 1080px;
+  height: 1350px;
+  background: var(--slide-bg);
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,255,163,0.06), transparent 60%),
+    linear-gradient(180deg, var(--slide-bg) 0%, var(--slide-bg-2) 100%);
+  overflow: hidden;
+  flex-shrink: 0;
+  zoom: var(--deck-zoom);
+  border: 1px solid var(--rule-strong);
+  box-shadow: 0 24px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(0,255,163,0.03);
+  border-radius: 4px;
+}
+
+/* — Slide spec chrome — tiny label top-left and brand pin — */
+.slide__chrome {
+  position: absolute;
+  top: 40px;
+  left: 56px;
+  right: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(0,255,163,0.42);
+  font-variant-numeric: tabular-nums;
+}
+.slide__chrome__post {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.slide__chrome__post::before {
+  content: "";
+  width: 8px; height: 8px;
+  background: var(--neon);
+  box-shadow: 0 0 12px var(--neon-soft);
+  border-radius: 50%;
+}
+
+.slide__brand-pin {
+  position: absolute;
+  bottom: 56px;
+  left: 56px;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 12px;
+  color: rgba(240,245,242,0.78);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+.slide__brand-pin .pin-dot {
+  width: 10px; height: 10px;
+  background: var(--neon);
+  box-shadow: 0 0 16px var(--neon-soft);
+  border-radius: 50%;
+  align-self: center;
+}
+.slide__brand-pin .pin-mark {
+  position: relative;
+}
+.slide__brand-pin .pin-mark::after {
+  content: "";
+  display: block;
+  margin-top: 4px;
+  height: 1px;
+  background: var(--neon-dim);
+}
+
+.slide__hash {
+  position: absolute;
+  bottom: 56px;
+  right: 56px;
+  font-size: 18px;
+  letter-spacing: 0.16em;
+  color: rgba(240,245,242,0.45);
+  text-transform: uppercase;
+}
+
+/* — Slide body container — anchors the content layout — */
+.slide__body {
+  position: absolute;
+  inset: 140px 80px 160px 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* — Headline scale (huge — these slides are dominated by type) — */
+.slide__headline {
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  max-width: 880px;
+}
+.slide__headline em {
+  font-style: normal;
+  color: var(--neon);
+  text-shadow: 0 0 32px var(--neon-soft);
+}
+.slide__headline--xl { font-size: 132px; line-height: 0.98; }
+.slide__headline--xxl { font-size: 168px; line-height: 0.94; }
+.slide__headline--sm { font-size: 72px; line-height: 1.08; }
+
+.slide__sub {
+  margin-top: 28px;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--slide-ink-mute);
+  max-width: 800px;
+  letter-spacing: -0.005em;
+}
+
+/* — Three-beat manifesto rhythm (used in Slide 04 & closers) — */
+.slide__beats {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.slide__beats p {
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  padding-left: 32px;
+  border-left: 3px solid var(--neon);
+}
+.slide__beats p:nth-child(2) { border-left-color: var(--jade); }
+.slide__beats p:nth-child(3) { border-left-color: var(--mint-mute); }
+
+/* — Wordmark display (brand reveal slides) — */
+.slide__wordmark {
+  margin: auto 0;
+  font-size: 320px;
+  font-weight: 200;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  text-align: center;
+}
+.slide__wordmark .glow {
+  color: var(--neon);
+  text-shadow:
+    0 0 24px var(--neon),
+    0 0 64px var(--neon-soft);
+}
+
+/* — Visual stub box — represents where photo/dashboard mock will go — */
+.slide__stub {
+  position: relative;
+  border: 1.5px dashed var(--rule-strong);
+  border-radius: var(--r-md);
+  background:
+    repeating-linear-gradient(
+      135deg,
+      transparent 0 24px,
+      rgba(0,255,163,0.03) 24px 25px
+    ),
+    rgba(0,255,163,0.02);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.slide__stub--media { min-height: 480px; margin-bottom: 40px; }
+.slide__stub--dashboard { min-height: 540px; }
+.slide__stub--portrait { min-height: 600px; }
+.slide__stub--inline { min-height: 320px; }
+
+.slide__stub__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--neon);
+}
+.slide__stub__label .lucide { width: 22px; height: 22px; }
+.slide__stub__desc {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--slide-ink-mute);
+  max-width: 760px;
+}
+.slide__stub__hint {
+  margin-top: auto;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(0,255,163,0.5);
+  letter-spacing: 0.04em;
+}
+
+/* — Building grid stub (for dashboard-style slides) — */
+.slide__grid-stub {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 32px;
+}
+.slide__grid-stub__tile {
+  aspect-ratio: 1 / 1;
+  background: rgba(0,255,163,0.04);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 14px;
+  font-size: 16px;
+}
+.slide__grid-stub__tile .addr {
+  color: var(--mint-mute);
+  font-size: 14px;
+}
+.slide__grid-stub__tile .status {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--neon);
+}
+.slide__grid-stub__tile.status-amber .status { background: var(--amber); }
+.slide__grid-stub__tile.status-red    .status { background: var(--rose); }
+
+/* — Code-list stub (for regulation slides — LL84/97/87/133) — */
+.slide__code-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 32px;
+}
+.slide__code-list__item {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--rule);
+}
+.slide__code-list__item:last-child { border-bottom: none; }
+.slide__code-list__code {
+  font-size: 84px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--neon);
+  text-shadow: 0 0 32px var(--neon-soft);
+  min-width: 260px;
+}
+.slide__code-list__desc {
+  font-size: 24px;
+  color: var(--slide-ink-mute);
+  flex: 1;
+  line-height: 1.4;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   Notes panel — per-slide working notes
+   ──────────────────────────────────────────────────────────── */
+
+.notes {
+  padding: 22px 22px 26px;
+  background: var(--bg-notes);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-md);
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink-mute);
+  position: sticky;
+  top: 24px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--rule-strong) transparent;
+}
+.notes::-webkit-scrollbar { width: 5px; }
+.notes::-webkit-scrollbar-thumb { background: var(--rule-strong); border-radius: 999px; }
+
+.notes__field {
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.notes__field:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.notes__field-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--neon);
+  margin-bottom: 8px;
+}
+.notes__field-label .lucide { width: 12px; height: 12px; stroke-width: 2; }
+
+.notes__field p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.notes__field p + p { margin-top: 6px; }
+.notes__field em { color: var(--jade); font-style: italic; }
+
+.notes__field-en {
+  font-size: 12.5px;
+  color: var(--mint-mute);
+  font-style: italic;
+}
+
+.notes__brainstorm {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 4px 0 0;
+}
+.notes__brainstorm li {
+  display: grid;
+  grid-template-columns: 14px 1fr;
+  gap: 6px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--ink-mute);
+}
+.notes__brainstorm li::before {
+  content: "›";
+  color: var(--neon);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.notes__brainstorm strong { color: var(--ink); font-weight: 600; }
+
+/* ════════════════════════════════════════════════════════════════
+   Tag system — structural / mood / domain / anti
+   ──────────────────────────────────────────────────────────── */
+
+.notes__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.notes__tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 9px;
+  border-radius: var(--r-pill);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+  background: rgba(0,255,163,0.10);
+  color: var(--jade);
+  border: 1px solid rgba(0,255,163,0.18);
+  font-variant-numeric: tabular-nums;
+}
+.notes__tag--mood {
+  background: rgba(212,158,100,0.12);
+  color: var(--amber);
+  border-color: rgba(212,158,100,0.24);
+}
+.notes__tag--domain {
+  background: rgba(255,255,255,0.06);
+  color: var(--mint-mute);
+  border-color: rgba(255,255,255,0.10);
+}
+.notes__tag--anti {
+  background: rgba(190,80,80,0.10);
+  color: var(--rose);
+  border-color: rgba(190,80,80,0.24);
+  text-decoration: line-through;
+}
+
+/* — Refs slot — empty for now, designer drops <img> / <iframe> later — */
+.notes__refs {
+  border: 1px dashed var(--rule-strong);
+  border-radius: var(--r-sm);
+  padding: 14px;
+  text-align: center;
+  background: rgba(0,255,163,0.02);
+}
+.notes__refs__empty {
+  font-size: 11.5px;
+  color: var(--ink-faint);
+  letter-spacing: 0.06em;
+  font-style: italic;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   Intro card (top of deck — overall mood + anti-tags)
+   ──────────────────────────────────────────────────────────── */
+
+.intro-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding: 32px 36px;
+  background: var(--bg-notes);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-lg);
+  max-width: 1200px;
+  margin-bottom: 24px;
+}
+.intro-card__col h2 {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.intro-card__col h2 .lucide { width: 16px; height: 16px; color: var(--neon); }
+.intro-card__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13.5px;
+  color: var(--ink-mute);
+  line-height: 1.55;
+}
+.intro-card__list li {
+  display: grid;
+  grid-template-columns: 14px 1fr;
+  gap: 8px;
+}
+.intro-card__list li::before {
+  content: "•";
+  color: var(--neon);
+  font-weight: 700;
+}
+
+/* — Page top header — */
+.page-header {
+  padding: 40px var(--page-pad) 0;
+  max-width: 1200px;
+}
+.page-header__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--neon);
+  margin-bottom: 12px;
+}
+.page-header__eyebrow::before {
+  content: "";
+  width: 28px; height: 1px;
+  background: var(--neon);
+  display: inline-block;
+}
+.page-header__title {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin-bottom: 12px;
+  line-height: 1.1;
+}
+.page-header__sub {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-mute);
+  max-width: 720px;
+}
+.page-header__sub a { color: var(--neon); border-bottom: 1px solid var(--neon-dim); }
+
+/* — Spec strip — */
+.spec-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 24px 0 8px;
+  padding: 16px 22px;
+  background: rgba(0,255,163,0.04);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-md);
+  font-size: 12.5px;
+  color: var(--ink-mute);
+}
+.spec-strip__item { display: inline-flex; align-items: center; gap: 8px; }
+.spec-strip__item .lucide { width: 14px; height: 14px; color: var(--neon); }
+.spec-strip__item strong { color: var(--ink); font-weight: 600; letter-spacing: 0.01em; }
+
+/* ════════════════════════════════════════════════════════════════
+   Lucide icon defaults
+   ──────────────────────────────────────────────────────────── */
+
+.lucide {
+  display: inline-block;
+  vertical-align: -2px;
+  stroke-width: 1.75;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   Mobile fallback — collapse rail below slide
+   ──────────────────────────────────────────────────────────── */
+
+@media (max-width: 1280px) {
+  :root { --deck-zoom: 0.34; }
+}
+
+@media (max-width: 1080px) {
+  .page { grid-template-columns: 1fr; }
+  .slide-nav {
+    position: static;
+    height: auto;
+    padding: 22px;
+    border-right: none;
+    border-bottom: 1px solid var(--rule);
+  }
+  .slide-row { grid-template-columns: 1fr; }
+  .notes { position: static; max-height: none; }
+  :root { --deck-zoom: 0.28; }
+}

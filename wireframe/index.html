@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>VUE SMM — Wireframe v1</title>
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23050E0E'/%3E%3Ctext x='50' y='62' text-anchor='middle' font-family='system-ui,sans-serif' font-weight='700' font-size='42' fill='%2300FFA3'%3EV%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap">
+
+<link rel="stylesheet" href="../shared/service-menu.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<script>
+  window.PREVIEW_PROJECT_NAME = "VUE SMM";
+  window.PREVIEW_DEFAULT_VERSION = "wireframe";
+  window.PREVIEW_VERSIONS = [
+    { id: "wireframe", label: "Wireframe", desc: "Static slide structure & copy",   path: "../wireframe/" },
+    { id: "launcher",  label: "Launcher",  desc: "Index of all preview versions",   path: "../" }
+  ];
+</script>
+
+<div class="page">
+
+  <!-- ════════════════════════════════════════════════════════════════
+       LEFT NAV — slide outline, grouped by post
+       ──────────────────────────────────────────────────────────── -->
+  <nav class="slide-nav" aria-label="Slide outline">
+    <div class="slide-nav__brand">
+      <div class="slide-nav__brand-mark">VUE SMM</div>
+      <div class="slide-nav__brand-sub">Wireframe · v1</div>
+    </div>
+
+    <div class="slide-nav__group">
+      <div class="slide-nav__group-label"><span>Post 01 · Hook</span><span class="count">5</span></div>
+      <ul class="slide-nav__list">
+        <li><a class="slide-nav__link" href="#slide-1-1"><span class="slide-nav__link__num">01</span><span>Hook statement</span></a></li>
+        <li><a class="slide-nav__link" href="#slide-1-2"><span class="slide-nav__link__num">02</span><span>Operational chaos</span></a></li>
+        <li><a class="slide-nav__link" href="#slide-1-3"><span class="slide-nav__link__num">03</span><span>Introducing VUE</span></a></li>
+        <li><a class="slide-nav__link" href="#slide-1-4"><span class="slide-nav__link__num">04</span><span>One platform · clarity</span></a></li>
+        <li><a class="slide-nav__link" href="#slide-1-5"><span class="slide-nav__link__num">05</span><span>Enjoy the VUE 🌆</span></a></li>
+      </ul>
+    </div>
+
+    <div class="slide-nav__group">
+      <div class="slide-nav__group-label"><span>Post 02 · LL97</span><span class="count">5</span></div>
+      <ul class="slide-nav__list">
+        <li><a class="slide-nav__link" href="#slide-2-1"><span class="slide-nav__link__num">01</span><span>Fines don't care</span></a></li>
+        <li><a class="slide-nav__link" href="#slide-2-2"><span class="slide-nav__link__num">02</span><span>Pressure + overload</span></a></li>
+        <li><a class="slide-nav__link" href="#slide-2-3"><span class="slide-nav__link__num">03</span><span>Portfolio LL97 view</span></a></li>
+        <li><a class="slide-nav__link" href="#slide-2-4"><span class="slide-nav__link__num">04</span><span>Risk dashboard</span></a></li>
+        <li><a class="slide-nav__link" href="#slide-2-5"><span class="slide-nav__link__num">05</span><span>Know · Own</span></a></li>
+      </ul>
+    </div>
+
+    <div class="slide-nav__group">
+      <div class="slide-nav__group-label"><span>Post 03 · LL84</span><span class="count">5</span></div>
+      <ul class="slide-nav__list">
+        <li><a class="slide-nav__link" href="#slide-3-1"><span class="slide-nav__link__num">01</span><span>Annual reporting</span></a></li>
+        <li><a class="slide-nav__link" href="#slide-3-2"><span class="slide-nav__link__num">02</span><span>Penalty notice</span></a></li>
+        <li><a class="slide-nav__link" href="#slide-3-3"><span class="slide-nav__link__num">03</span><span>Real-time dashboard</span></a></li>
+        <li><a class="slide-nav__link" href="#slide-3-4"><span class="slide-nav__link__num">04</span><span>Benchmarking scores</span></a></li>
+        <li><a class="slide-nav__link" href="#slide-3-5"><span class="slide-nav__link__num">05</span><span>No surprises</span></a></li>
+      </ul>
+    </div>
+
+    <div class="slide-nav__group">
+      <div class="slide-nav__group-label"><span>Post 04 · Story</span><span class="count">5</span></div>
+      <ul class="slide-nav__list">
+        <li><a class="slide-nav__link" href="#slide-4-1"><span class="slide-nav__link__num">01</span><span>Story open</span></a></li>
+        <li><a class="slide-nav__link" href="#slide-4-2"><span class="slide-nav__link__num">02</span><span>Manual workflows</span></a></li>
+        <li><a class="slide-nav__link" href="#slide-4-3"><span class="slide-nav__link__num">03</span><span>One screen</span></a></li>
+        <li><a class="slide-nav__link" href="#slide-4-4"><span class="slide-nav__link__num">04</span><span>Operational relief</span></a></li>
+        <li><a class="slide-nav__link" href="#slide-4-5"><span class="slide-nav__link__num">05</span><span>That's the idea</span></a></li>
+      </ul>
+    </div>
+
+    <div class="slide-nav__group">
+      <div class="slide-nav__group-label"><span>Post 05 · Vision</span><span class="count">5</span></div>
+      <ul class="slide-nav__list">
+        <li><a class="slide-nav__link" href="#slide-5-1"><span class="slide-nav__link__num">01</span><span>Laws aren't going away</span></a></li>
+        <li><a class="slide-nav__link" href="#slide-5-2"><span class="slide-nav__link__num">02</span><span>LL84 · 97 · 87 · 133</span></a></li>
+        <li><a class="slide-nav__link" href="#slide-5-3"><span class="slide-nav__link__num">03</span><span>Year-round view</span></a></li>
+        <li><a class="slide-nav__link" href="#slide-5-4"><span class="slide-nav__link__num">04</span><span>Operational oversight</span></a></li>
+        <li><a class="slide-nav__link" href="#slide-5-5"><span class="slide-nav__link__num">05</span><span>Your portfolio · power</span></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       MAIN COLUMN — page header + intro card + 5 posts × 5 slides
+       ──────────────────────────────────────────────────────────── -->
+  <div>
+    <header class="page-header">
+      <span class="page-header__eyebrow">VUE · LinkedIn carousel · wireframe blackboard</span>
+      <h1 class="page-header__title">Five carousels · twenty-five slides · one mood</h1>
+      <p class="page-header__sub">
+        Working wireframe for the VUE LinkedIn carousel campaign. Left column = static slide layout, mood and copy.
+        Right column = per-slide notes: Russian translation, visual proposal, brainstorm, Mobbin-searchable reference tags.
+        Source brief: <a href="../docs/brief.md">docs/brief.md</a>.
+      </p>
+
+      <div class="spec-strip">
+        <div class="spec-strip__item"><i data-lucide="ratio"></i> <strong>1080 × 1350</strong> · 4:5 portrait</div>
+        <div class="spec-strip__item"><i data-lucide="layers"></i> <strong>5 posts</strong> · 5 slides each</div>
+        <div class="spec-strip__item"><i data-lucide="palette"></i> Dark teal + neon-mint glow</div>
+        <div class="spec-strip__item"><i data-lucide="type"></i> Inter</div>
+        <div class="spec-strip__item"><i data-lucide="linkedin"></i> Primary · LinkedIn</div>
+      </div>
+    </header>
+
+    <main class="deck">
+
+      <!-- INTRO CARD — overall mood + anti-tags -->
+      <section class="intro-card">
+        <div class="intro-card__col">
+          <h2><i data-lucide="compass"></i> Creative direction</h2>
+          <ul class="intro-card__list">
+            <li>Premium · cinematic · enterprise SaaS</li>
+            <li>NYC-focused · data-driven · minimal</li>
+            <li>Dark mode · sapphire / electric blue accents</li>
+            <li>Glassmorphism panels · thin grid systems</li>
+            <li>Branded enterprise storytelling — <em>not</em> educational infographic</li>
+            <li>Core theme: <strong>From chaos to clarity</strong></li>
+            <li>VUE feels like: command center · portfolio overview · ops platform</li>
+          </ul>
+        </div>
+        <div class="intro-card__col">
+          <h2><i data-lucide="ban"></i> Anti-direction (no-go list)</h2>
+          <div class="notes__tags" style="margin-bottom:14px;">
+            <span class="notes__tag notes__tag--anti">infographic-carousel</span>
+            <span class="notes__tag notes__tag--anti">stock-cliche</span>
+            <span class="notes__tag notes__tag--anti">startup-flash</span>
+            <span class="notes__tag notes__tag--anti">neumorphism</span>
+            <span class="notes__tag notes__tag--anti">claymorphism</span>
+            <span class="notes__tag notes__tag--anti">cartoon-mascot</span>
+            <span class="notes__tag notes__tag--anti">crypto-bro</span>
+            <span class="notes__tag notes__tag--anti">3d-blobs</span>
+            <span class="notes__tag notes__tag--anti">gradient-soup</span>
+            <span class="notes__tag notes__tag--anti">emoji-overload</span>
+            <span class="notes__tag notes__tag--anti">comic-fonts</span>
+            <span class="notes__tag notes__tag--anti">rewrite-client-copy</span>
+          </div>
+          <h2 style="margin-top:12px;"><i data-lucide="lock-keyhole"></i> Sacred rules</h2>
+          <ul class="intro-card__list">
+            <li>Client copy is <strong>frozen</strong> — use exact text, no paraphrase</li>
+            <li>Slides carry hook typography only — full copy lives in caption</li>
+            <li>RU translation is mandatory per slide (idiomatic, not literal)</li>
+            <li>Every visual gets a placeholder until the design phase</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ════════════════════════════════════════════════════════════════
+           POST 01 — The Hook / Brand Intro
+           ──────────────────────────────────────────────────────────── -->
+      <section class="post-header" id="post-1">
+        <span class="post-header__eyebrow">Post 01 · The Hook / Brand Intro</span>
+        <h2 class="post-header__title">From flying blind to one source of clarity</h2>
+        <p class="post-header__sub">Establishes the "flying blind" metaphor and lands VUE as the resolution. Brand-intro carousel — wide audience, no deep regulation language.</p>
+        <div class="post-caption">
+          <div class="post-caption__label"><i data-lucide="message-square-quote"></i> Full client caption (LinkedIn post body)</div>
+          <div class="post-caption__body">
+            <p>Managing a portfolio of NYC buildings shouldn't feel like flying blind.</p>
+            <p>Deadlines buried in spreadsheets. Compliance fines hiding in the fine print. Energy data scattered across a dozen logins.</p>
+            <p>We built VUE to change that.</p>
+            <p>One platform. Every building. Complete clarity.</p>
+            <p>Enjoy the VUE. 🌆</p>
+            <p class="post-caption__hashtags">#EnergyCompliance #NYC #LocalLaw #LL97 #PropTech #EnjoyTheVUE</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- P1-S01 -->
+      <section class="slide-row" id="slide-1-1">
+        <div class="slide-row__label">
+          <span class="slide-row__label__num">P01 · S01</span>
+          <span class="slide-row__label__dot"></span>
+          <span>Hook statement</span>
+          <span class="slide-row__label__spec">1080 × 1350</span>
+        </div>
+        <article class="slide">
+          <div class="slide__chrome">
+            <div class="slide__chrome__post">Post 01 · 01 / 05</div>
+            <div>VUE</div>
+          </div>
+          <div class="slide__body">
+            <div class="slide__stub slide__stub--media">
+              <div class="slide__stub__label"><i data-lucide="camera"></i> Full-bleed visual</div>
+              <div class="slide__stub__desc">Cinematic NYC night aerial — Manhattan skyline from elevated angle. Light haze, slight motion blur, neon-mint signal glow under headline.</div>
+              <div class="slide__stub__hint">~ 60–70% of the slide area</div>
+            </div>
+            <h2 class="slide__headline">Managing a portfolio of NYC buildings shouldn't feel like <em>flying blind</em>.</h2>
+          </div>
+          <div class="slide__brand-pin"><span class="pin-dot"></span><span class="pin-mark">VUE</span></div>
+          <div class="slide__hash">#EnjoyTheVUE</div>
+        </article>
+        <aside class="notes">
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="languages"></i> Перевод (RU)</span>
+            <p>Управление портфелем зданий в Нью-Йорке не должно ощущаться как полёт вслепую.</p>
+            <p class="notes__field-en">EN: "Managing a portfolio of NYC buildings shouldn't feel like flying blind."</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="eye"></i> Предложение визуала</span>
+            <p>Кинематографичный аэро-Манхэттен ночью, с лёгким motion blur. Поверх — крупный editorial-заголовок, «flying blind» курсивом и неоновым свечением (как «U» в VUE на брендовом moodboard). В нижнем левом углу — VUE-пин, в правом — хэштег #EnjoyTheVUE мелко.</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="lightbulb"></i> Brainstorm</span>
+            <ul class="notes__brainstorm">
+              <li><strong>А.</strong> Заголовок ломается по строке после «NYC buildings» — три тяжёлых блока, ритм манифеста.</li>
+              <li><strong>Б.</strong> Альтернатива — призрачный dashboard-ghost полупрозрачным слоем под заголовком: подсказка хаоса до того, как мы скажем про VUE.</li>
+              <li><strong>В.</strong> Skyline с одним светящимся окном среди тёмных — твоё единственное окно ясности (метафора).</li>
+            </ul>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="hash"></i> Reference search tags</span>
+            <div class="notes__tags">
+              <span class="notes__tag">hook-slide</span>
+              <span class="notes__tag">full-bleed-aerial</span>
+              <span class="notes__tag">overlay-headline</span>
+              <span class="notes__tag">italic-emphasis</span>
+              <span class="notes__tag notes__tag--mood">cinematic-night</span>
+              <span class="notes__tag notes__tag--mood">editorial-tech</span>
+              <span class="notes__tag notes__tag--mood">neon-mint-glow</span>
+              <span class="notes__tag notes__tag--domain">proptech</span>
+              <span class="notes__tag notes__tag--domain">nyc-real-estate</span>
+            </div>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="image-plus"></i> Refs</span>
+            <div class="notes__refs"><p class="notes__refs__empty">— drop &lt;img&gt; or &lt;iframe&gt; here</p></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- P1-S02 -->
+      <section class="slide-row" id="slide-1-2">
+        <div class="slide-row__label">
+          <span class="slide-row__label__num">P01 · S02</span>
+          <span class="slide-row__label__dot"></span>
+          <span>Operational chaos</span>
+          <span class="slide-row__label__spec">1080 × 1350</span>
+        </div>
+        <article class="slide">
+          <div class="slide__chrome">
+            <div class="slide__chrome__post">Post 01 · 02 / 05</div>
+            <div>VUE</div>
+          </div>
+          <div class="slide__body">
+            <h2 class="slide__headline slide__headline--sm">Deadlines buried in spreadsheets.<br>Fines hiding in the fine print.<br>Data scattered across a dozen logins.</h2>
+            <div class="slide__stub slide__stub--inline" style="margin-top:48px;">
+              <div class="slide__stub__label"><i data-lucide="layers-2"></i> Chaos collage</div>
+              <div class="slide__stub__desc">Stacked screenshot mocks rotated at slight angles: Excel · PDF · login screen · email · alert toast. Cool-grey ghosting, sapphire highlights on key numbers.</div>
+              <div class="slide__stub__hint">~ 12 layers, soft drop shadows, no logos</div>
+            </div>
+          </div>
+          <div class="slide__brand-pin"><span class="pin-dot"></span><span class="pin-mark">VUE</span></div>
+          <div class="slide__hash">#EnjoyTheVUE</div>
+        </article>
+        <aside class="notes">
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="languages"></i> Перевод (RU)</span>
+            <p>Дедлайны похоронены в таблицах.<br>Штрафы прячутся в мелком шрифте.<br>Энергоданные разбросаны по десятку логинов.</p>
+            <p class="notes__field-en">EN: "Deadlines buried in spreadsheets. Compliance fines hiding in the fine print. Energy data scattered across a dozen logins."</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="eye"></i> Предложение визуала</span>
+            <p>Коллаж разбросанных UI-фрагментов: Excel-таблица с выделенными цифрами, PDF-цитата мелким, экран логина ENERGY STAR, e-mail с alert-индикатором. Развернуты под лёгкими углами (-8°, +4°, -3°), частично перекрывают друг друга. Тёмно-зелёная подложка, выделения — sapphire blue, чтобы намекнуть на скрытые риски.</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="lightbulb"></i> Brainstorm</span>
+            <ul class="notes__brainstorm">
+              <li><strong>А.</strong> Три строки-параллелизм — каждое явление получает свой блок и свой «свидетельский» скрин.</li>
+              <li><strong>Б.</strong> Альтернатива — split-screen: слева хаос (50%), справа белый void как намёк на «будущую ясность».</li>
+              <li><strong>В.</strong> Time-pressure overlay: часы 23:58 поверх коллажа, мелко в углу.</li>
+            </ul>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="hash"></i> Reference search tags</span>
+            <div class="notes__tags">
+              <span class="notes__tag">chaos-collage</span>
+              <span class="notes__tag">ui-screenshot-stack</span>
+              <span class="notes__tag">document-stack</span>
+              <span class="notes__tag">three-line-parallelism</span>
+              <span class="notes__tag">before-state</span>
+              <span class="notes__tag notes__tag--mood">editorial-collage</span>
+              <span class="notes__tag notes__tag--mood">fragmented</span>
+              <span class="notes__tag notes__tag--domain">b2b-saas</span>
+            </div>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="image-plus"></i> Refs</span>
+            <div class="notes__refs"><p class="notes__refs__empty">— drop &lt;img&gt; or &lt;iframe&gt; here</p></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- P1-S03 -->
+      <section class="slide-row" id="slide-1-3">
+        <div class="slide-row__label">
+          <span class="slide-row__label__num">P01 · S03</span>
+          <span class="slide-row__label__dot"></span>
+          <span>Introducing VUE</span>
+          <span class="slide-row__label__spec">1080 × 1350</span>
+        </div>
+        <article class="slide">
+          <div class="slide__chrome">
+            <div class="slide__chrome__post">Post 01 · 03 / 05</div>
+            <div>VUE</div>
+          </div>
+          <div class="slide__body" style="justify-content: center;">
+            <h2 class="slide__headline slide__headline--sm" style="text-align:center;">We built <em>VUE</em> to change that.</h2>
+            <div class="slide__wordmark" style="margin-top: 64px;">V<span class="glow">U</span>E</div>
+          </div>
+          <div class="slide__brand-pin"><span class="pin-dot"></span><span class="pin-mark">EnergyPlus</span></div>
+          <div class="slide__hash">#EnjoyTheVUE</div>
+        </article>
+        <aside class="notes">
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="languages"></i> Перевод (RU)</span>
+            <p>Мы создали <em>VUE</em>, чтобы это изменить.</p>
+            <p class="notes__field-en">EN: "We built VUE to change that."</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="eye"></i> Предложение визуала</span>
+            <p>Brand reveal moment. Огромный wordmark «VUE» по центру (~320–360px), тонкий weight (200–300). Центральная «U» — неоново-зелёная, со свечением как на брендовом moodboard. Над wordmark — тонкий заголовок «We built VUE to change that.» Внизу — мелкий EnergyPlus-credit. Тёмный void, без других визуальных элементов.</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="lightbulb"></i> Brainstorm</span>
+            <ul class="notes__brainstorm">
+              <li><strong>А.</strong> Только wordmark, без заголовка — pure brand moment, текст уходит в caption.</li>
+              <li><strong>Б.</strong> VUE внутри одного плавающего glass-панеля, за ним skyline silhouette.</li>
+              <li><strong>В.</strong> Type-only: «V», «U», «E» — каждая буква в своей колонке-divider, U светится.</li>
+            </ul>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="hash"></i> Reference search tags</span>
+            <div class="notes__tags">
+              <span class="notes__tag">brand-reveal</span>
+              <span class="notes__tag">wordmark-hero</span>
+              <span class="notes__tag">centered-logo</span>
+              <span class="notes__tag">quiet-moment</span>
+              <span class="notes__tag">glow-letter</span>
+              <span class="notes__tag notes__tag--mood">premium-saas</span>
+              <span class="notes__tag notes__tag--mood">cinematic-quiet</span>
+              <span class="notes__tag notes__tag--mood">neon-mint</span>
+              <span class="notes__tag notes__tag--domain">brand-intro</span>
+            </div>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="image-plus"></i> Refs</span>
+            <div class="notes__refs"><p class="notes__refs__empty">— drop &lt;img&gt; or &lt;iframe&gt; here</p></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- P1-S04 -->
+      <section class="slide-row" id="slide-1-4">
+        <div class="slide-row__label">
+          <span class="slide-row__label__num">P01 · S04</span>
+          <span class="slide-row__label__dot"></span>
+          <span>Value triplet</span>
+          <span class="slide-row__label__spec">1080 × 1350</span>
+        </div>
+        <article class="slide">
+          <div class="slide__chrome">
+            <div class="slide__chrome__post">Post 01 · 04 / 05</div>
+            <div>VUE</div>
+          </div>
+          <div class="slide__body" style="justify-content: center;">
+            <div class="slide__beats">
+              <p>One platform.</p>
+              <p>Every building.</p>
+              <p>Complete clarity.</p>
+            </div>
+            <div class="slide__stub slide__stub--inline" style="margin-top:48px;">
+              <div class="slide__stub__label"><i data-lucide="layout-dashboard"></i> Dashboard glimpse</div>
+              <div class="slide__stub__desc">Faded glass-panel dashboard fragment behind the type — barely visible (10–15% opacity), as a hint of the product.</div>
+            </div>
+          </div>
+          <div class="slide__brand-pin"><span class="pin-dot"></span><span class="pin-mark">VUE</span></div>
+          <div class="slide__hash">#EnjoyTheVUE</div>
+        </article>
+        <aside class="notes">
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="languages"></i> Перевод (RU)</span>
+            <p>Одна платформа.<br>Каждое здание.<br>Полная ясность.</p>
+            <p class="notes__field-en">EN: "One platform. Every building. Complete clarity."</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="eye"></i> Предложение визуала</span>
+            <p>Три-битный заголовок — каждая фраза на своей строке, акцент-полоса слева (неон → jade → mute-mint), как ритмический счётчик. Под текстом — приглушённый glass-panel фрагмент дашборда (10–15% opacity), едва заметный — намёк на продукт без громкого «вот наш UI». Generous negative space сверху.</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="lightbulb"></i> Brainstorm</span>
+            <ul class="notes__brainstorm">
+              <li><strong>А.</strong> Type-only, никакой dashboard-подсказки — value-prop в чистом виде.</li>
+              <li><strong>Б.</strong> Split: текст слева, реальный dashboard-fragment справа в glass-окне.</li>
+              <li><strong>В.</strong> Каждая фраза получает свою тонкую иконку слева (Lucide: <code>layers</code>, <code>building</code>, <code>eye</code>).</li>
+            </ul>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="hash"></i> Reference search tags</span>
+            <div class="notes__tags">
+              <span class="notes__tag">three-beat-headline</span>
+              <span class="notes__tag">value-prop-slide</span>
+              <span class="notes__tag">type-driven</span>
+              <span class="notes__tag">vertical-rhythm</span>
+              <span class="notes__tag">glass-panel</span>
+              <span class="notes__tag notes__tag--mood">minimal-manifesto</span>
+              <span class="notes__tag notes__tag--mood">editorial-product</span>
+              <span class="notes__tag notes__tag--domain">b2b-saas</span>
+            </div>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="image-plus"></i> Refs</span>
+            <div class="notes__refs"><p class="notes__refs__empty">— drop &lt;img&gt; or &lt;iframe&gt; here</p></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- P1-S05 -->
+      <section class="slide-row" id="slide-1-5">
+        <div class="slide-row__label">
+          <span class="slide-row__label__num">P01 · S05</span>
+          <span class="slide-row__label__dot"></span>
+          <span>Brand end-card</span>
+          <span class="slide-row__label__spec">1080 × 1350</span>
+        </div>
+        <article class="slide">
+          <div class="slide__chrome">
+            <div class="slide__chrome__post">Post 01 · 05 / 05</div>
+            <div>VUE</div>
+          </div>
+          <div class="slide__body" style="justify-content: flex-end; align-items: center;">
+            <div class="slide__stub slide__stub--media" style="position:absolute; inset: 0 0 280px 0; border:none; padding: 0; opacity: 0.45;">
+              <div class="slide__stub__label" style="padding: 56px;"><i data-lucide="moon-star"></i> Cinematic NYC at dusk</div>
+              <div class="slide__stub__desc" style="padding: 0 56px;">Golden-hour skyline matching Slide 01's aerial — visual bookend. Sapphire-to-mint gradient sky.</div>
+            </div>
+            <h2 class="slide__headline" style="z-index:1; text-align:center; margin-bottom: 0;">Enjoy the <em>VUE</em>. 🌆</h2>
+          </div>
+          <div class="slide__brand-pin"><span class="pin-dot"></span><span class="pin-mark">VUE</span></div>
+          <div class="slide__hash">#EnjoyTheVUE</div>
+        </article>
+        <aside class="notes">
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="languages"></i> Перевод (RU)</span>
+            <p>Наслаждайтесь VUE. 🌆</p>
+            <p class="notes__field-en">EN: "Enjoy the VUE. 🌆"</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="eye"></i> Предложение визуала</span>
+            <p>Закрывающая карточка — кинематографичный Манхэттен в час заката. Та же точка съёмки, что и на Slide 01 ночью — визуальная пара: «до VUE → после VUE». Tagline «Enjoy the VUE.» крупно по центру, эмодзи 🌆 справа в строке. Внизу — VUE wordmark с подсветкой U.</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="lightbulb"></i> Brainstorm</span>
+            <ul class="notes__brainstorm">
+              <li><strong>А.</strong> Visual bookend — те же координаты съёмки, что и Slide 01, но в час заката. «До и после» через свет.</li>
+              <li><strong>Б.</strong> Pure type на тёмном void — без визуала, чтобы caption и хэштеги вели.</li>
+              <li><strong>В.</strong> Кадр-через-стекло (отсылка к concept «VUE» = взгляд через очки), skyline в линзах.</li>
+            </ul>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="hash"></i> Reference search tags</span>
+            <div class="notes__tags">
+              <span class="notes__tag">end-card</span>
+              <span class="notes__tag">closing-slide</span>
+              <span class="notes__tag">tagline-slide</span>
+              <span class="notes__tag">cityscape-dusk</span>
+              <span class="notes__tag">golden-hour</span>
+              <span class="notes__tag notes__tag--mood">cinematic-warm</span>
+              <span class="notes__tag notes__tag--mood">atmospheric</span>
+              <span class="notes__tag notes__tag--mood">brand-finale</span>
+              <span class="notes__tag notes__tag--domain">campaign-close</span>
+            </div>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="image-plus"></i> Refs</span>
+            <div class="notes__refs"><p class="notes__refs__empty">— drop &lt;img&gt; or &lt;iframe&gt; here</p></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- ════════════════════════════════════════════════════════════════
+           POST 02 — The Pain Point (LL97)
+           ──────────────────────────────────────────────────────────── -->
+      <section class="post-header" id="post-2">
+        <span class="post-header__eyebrow">Post 02 · The Pain Point (LL97 angle)</span>
+        <h2 class="post-header__title">LL97 doesn't care if you're busy</h2>
+        <p class="post-header__sub">Sharper, regulatory-focused tone. Targets owners aware of LL97 but anxious about exposure. Resolution = portfolio-wide visibility before the deadline.</p>
+        <div class="post-caption">
+          <div class="post-caption__label"><i data-lucide="message-square-quote"></i> Full client caption (LinkedIn post body)</div>
+          <div class="post-caption__body">
+            <p>NYC's Local Law 97 fines don't care if you're busy.</p>
+            <p>They don't care if your energy data is late from your utility. They don't care if you have 12 buildings and 3 people managing them.</p>
+            <p>What if you could see every property's LL97 exposure — all at once — before the deadline hits?</p>
+            <p>That's exactly what VUE was built for.</p>
+            <p>Know your risk. Own your compliance. Enjoy the VUE. 🌆</p>
+            <p class="post-caption__hashtags">#LL97 #NYCCompliance #EnergyBenchmarking #CoveredBuildings #EnjoyTheVUE</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- P2-S01 -->
+      <section class="slide-row" id="slide-2-1">
+        <div class="slide-row__label">
+          <span class="slide-row__label__num">P02 · S01</span>
+          <span class="slide-row__label__dot"></span>
+          <span>Fines don't care</span>
+          <span class="slide-row__label__spec">1080 × 1350</span>
+        </div>
+        <article class="slide">
+          <div class="slide__chrome">
+            <div class="slide__chrome__post">Post 02 · 01 / 05</div>
+            <div>LL97</div>
+          </div>
+          <div class="slide__body">
+            <h2 class="slide__headline">NYC's <em>Local Law 97</em> fines don't care if you're busy.</h2>
+            <div class="slide__sub">Annual penalties · escalating after 2030 · scoped to covered buildings &gt; 25,000 sq ft.</div>
+          </div>
+          <div class="slide__brand-pin"><span class="pin-dot"></span><span class="pin-mark">VUE</span></div>
+          <div class="slide__hash">#LL97</div>
+        </article>
+        <aside class="notes">
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="languages"></i> Перевод (RU)</span>
+            <p>Штрафы по Local Law 97 в Нью-Йорке не интересуются, заняты вы или нет.</p>
+            <p class="notes__field-en">EN: "NYC's Local Law 97 fines don't care if you're busy."</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="eye"></i> Предложение визуала</span>
+            <p>Slab-statement без визуала. Тёмный фон, заголовок weight 700, «Local Law 97» выделен неоновой подсветкой (как glow-letter на брендовом moodboard). Под заголовком — мелкий regulatory subline для контекста (можно убрать если клиент не хочет цифр в брифе). По краю слайда — тонкая sapphire-линия как «alert frame».</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="lightbulb"></i> Brainstorm</span>
+            <ul class="notes__brainstorm">
+              <li><strong>А.</strong> Pure type, никаких иллюстраций — серьёзный регуляторный тон.</li>
+              <li><strong>Б.</strong> Court-document texture в фоне (10% opacity) — намёк на «бумажную» природу регуляции.</li>
+              <li><strong>В.</strong> Crimson/red accent на «don't care» вместо стандартной мяты — алярм-сигнал.</li>
+            </ul>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="hash"></i> Reference search tags</span>
+            <div class="notes__tags">
+              <span class="notes__tag">slab-statement</span>
+              <span class="notes__tag">regulatory-callout</span>
+              <span class="notes__tag">type-only-slide</span>
+              <span class="notes__tag">alert-frame</span>
+              <span class="notes__tag">law-reference</span>
+              <span class="notes__tag notes__tag--mood">serious-editorial</span>
+              <span class="notes__tag notes__tag--mood">enterprise-warning</span>
+              <span class="notes__tag notes__tag--domain">compliance</span>
+              <span class="notes__tag notes__tag--domain">proptech</span>
+            </div>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="image-plus"></i> Refs</span>
+            <div class="notes__refs"><p class="notes__refs__empty">— drop &lt;img&gt; or &lt;iframe&gt; here</p></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- P2-S02 -->
+      <section class="slide-row" id="slide-2-2">
+        <div class="slide-row__label">
+          <span class="slide-row__label__num">P02 · S02</span>
+          <span class="slide-row__label__dot"></span>
+          <span>Pressure + overload</span>
+          <span class="slide-row__label__spec">1080 × 1350</span>
+        </div>
+        <article class="slide">
+          <div class="slide__chrome">
+            <div class="slide__chrome__post">Post 02 · 02 / 05</div>
+            <div>LL97</div>
+          </div>
+          <div class="slide__body">
+            <h2 class="slide__headline slide__headline--sm"><em>12 buildings.</em><br><em>3 people.</em><br>The deadline doesn't wait.</h2>
+            <div class="slide__stub slide__stub--inline" style="margin-top: 40px;">
+              <div class="slide__stub__label"><i data-lucide="bell-ring"></i> Pressure visual</div>
+              <div class="slide__stub__desc">Stack of notification toasts / inbox flood / red-flagged calendar. Tight composition. Sapphire on data, rose on overdue.</div>
+            </div>
+          </div>
+          <div class="slide__brand-pin"><span class="pin-dot"></span><span class="pin-mark">VUE</span></div>
+          <div class="slide__hash">#LL97</div>
+        </article>
+        <aside class="notes">
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="languages"></i> Перевод (RU)</span>
+            <p>12 зданий. 3 человека. Дедлайн не ждёт.</p>
+            <p class="notes__field-en">Derived from client copy: "They don't care if you have 12 buildings and 3 people managing them."</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="eye"></i> Предложение визуала</span>
+            <p>Текст + tight visual stack: серия notification-toast'ов с urgent-метками, inbox с 47 unread, calendar-strip с красными флагами. Композиция плотная — диссонанс с calm-эстетикой остального deck'а. Acцент: sapphire blue на цифрах, rose-red на «overdue».</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="lightbulb"></i> Brainstorm</span>
+            <ul class="notes__brainstorm">
+              <li><strong>А.</strong> Numbers-led: гигантские «12 / 3» крупным display weight, deadline ticker внизу.</li>
+              <li><strong>Б.</strong> Часы 23:58 крупным планом, deadline tags вокруг.</li>
+              <li><strong>В.</strong> Phone notification cascade — поток уведомлений как лента.</li>
+            </ul>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="hash"></i> Reference search tags</span>
+            <div class="notes__tags">
+              <span class="notes__tag">numbers-headline</span>
+              <span class="notes__tag">notification-stack</span>
+              <span class="notes__tag">deadline-pressure</span>
+              <span class="notes__tag">inbox-overload</span>
+              <span class="notes__tag">stress-visual</span>
+              <span class="notes__tag notes__tag--mood">tense-composition</span>
+              <span class="notes__tag notes__tag--mood">amber-alert</span>
+              <span class="notes__tag notes__tag--domain">ops-stress</span>
+            </div>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="image-plus"></i> Refs</span>
+            <div class="notes__refs"><p class="notes__refs__empty">— drop &lt;img&gt; or &lt;iframe&gt; here</p></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- P2-S03 -->
+      <section class="slide-row" id="slide-2-3">
+        <div class="slide-row__label">
+          <span class="slide-row__label__num">P02 · S03</span>
+          <span class="slide-row__label__dot"></span>
+          <span>Portfolio LL97 view</span>
+          <span class="slide-row__label__spec">1080 × 1350</span>
+        </div>
+        <article class="slide">
+          <div class="slide__chrome">
+            <div class="slide__chrome__post">Post 02 · 03 / 05</div>
+            <div>LL97</div>
+          </div>
+          <div class="slide__body">
+            <h2 class="slide__headline slide__headline--sm">See every property's <em>LL97 exposure</em> — all at once.</h2>
+            <div class="slide__grid-stub">
+              <div class="slide__grid-stub__tile"><span class="addr">350 5th Ave</span><span class="status"></span></div>
+              <div class="slide__grid-stub__tile status-amber"><span class="addr">200 Park Ave</span><span class="status"></span></div>
+              <div class="slide__grid-stub__tile"><span class="addr">1 World Trade</span><span class="status"></span></div>
+              <div class="slide__grid-stub__tile status-red"><span class="addr">432 Park Ave</span><span class="status"></span></div>
+              <div class="slide__grid-stub__tile"><span class="addr">11 Madison</span><span class="status"></span></div>
+              <div class="slide__grid-stub__tile status-amber"><span class="addr">285 Madison</span><span class="status"></span></div>
+              <div class="slide__grid-stub__tile"><span class="addr">28 Liberty</span><span class="status"></span></div>
+              <div class="slide__grid-stub__tile"><span class="addr">1 Bryant Park</span><span class="status"></span></div>
+              <div class="slide__grid-stub__tile status-amber"><span class="addr">7 World Trade</span><span class="status"></span></div>
+              <div class="slide__grid-stub__tile"><span class="addr">55 Hudson Yards</span><span class="status"></span></div>
+              <div class="slide__grid-stub__tile status-red"><span class="addr">100 Wall St</span><span class="status"></span></div>
+              <div class="slide__grid-stub__tile"><span class="addr">2 Penn Plaza</span><span class="status"></span></div>
+            </div>
+          </div>
+          <div class="slide__brand-pin"><span class="pin-dot"></span><span class="pin-mark">VUE</span></div>
+          <div class="slide__hash">#LL97</div>
+        </article>
+        <aside class="notes">
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="languages"></i> Перевод (RU)</span>
+            <p>Видеть LL97-экспозицию каждого объекта — сразу всех.</p>
+            <p class="notes__field-en">EN: "What if you could see every property's LL97 exposure — all at once — before the deadline hits?"</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="eye"></i> Предложение визуала</span>
+            <p>Portfolio-grid: 12 building-tile карточек в 4-колоночной сетке. Каждая — адрес + статус-точка (green/amber/red как traffic light). Glassmorphism-стиль, тонкие linings. Заголовок над сеткой — italic-emphasis на «LL97 exposure». На брендовом moodboard есть похожие пиктограммы внизу — можно цитировать их визуальный язык.</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="lightbulb"></i> Brainstorm</span>
+            <ul class="notes__brainstorm">
+              <li><strong>А.</strong> Grid 4×3 с реальными NYC-адресами (как сейчас) — даёт ощущение реального portfolio.</li>
+              <li><strong>Б.</strong> Map-view вариант: пины на карте Манхэттена с цветными статусами.</li>
+              <li><strong>В.</strong> List-view с сортируемой risk-колонкой — больше «dashboard-look».</li>
+            </ul>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="hash"></i> Reference search tags</span>
+            <div class="notes__tags">
+              <span class="notes__tag">portfolio-grid</span>
+              <span class="notes__tag">status-cards</span>
+              <span class="notes__tag">building-tiles</span>
+              <span class="notes__tag">traffic-light-status</span>
+              <span class="notes__tag">glass-cards</span>
+              <span class="notes__tag">overview-state</span>
+              <span class="notes__tag notes__tag--mood">data-driven</span>
+              <span class="notes__tag notes__tag--mood">control-center</span>
+              <span class="notes__tag notes__tag--domain">portfolio-management</span>
+              <span class="notes__tag notes__tag--domain">ll97-dashboard</span>
+            </div>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="image-plus"></i> Refs</span>
+            <div class="notes__refs"><p class="notes__refs__empty">— drop &lt;img&gt; or &lt;iframe&gt; here</p></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- P2-S04 -->
+      <section class="slide-row" id="slide-2-4">
+        <div class="slide-row__label">
+          <span class="slide-row__label__num">P02 · S04</span>
+          <span class="slide-row__label__dot"></span>
+          <span>Risk dashboard</span>
+          <span class="slide-row__label__spec">1080 × 1350</span>
+        </div>
+        <article class="slide">
+          <div class="slide__chrome">
+            <div class="slide__chrome__post">Post 02 · 04 / 05</div>
+            <div>LL97</div>
+          </div>
+          <div class="slide__body">
+            <h2 class="slide__headline slide__headline--sm">That's exactly what <em>VUE</em> was built for.</h2>
+            <div class="slide__stub slide__stub--dashboard" style="margin-top: 40px;">
+              <div class="slide__stub__label"><i data-lucide="layout-dashboard"></i> Hero dashboard mock</div>
+              <div class="slide__stub__desc">KPI strip top (Portfolio LL97 status · Buildings at risk · Penalty exposure). Risk timeline middle. Building list bottom with sortable risk column.</div>
+              <div class="slide__stub__hint">Glassmorphism panels · sapphire data · neon-mint signals</div>
+            </div>
+          </div>
+          <div class="slide__brand-pin"><span class="pin-dot"></span><span class="pin-mark">VUE</span></div>
+          <div class="slide__hash">#LL97</div>
+        </article>
+        <aside class="notes">
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="languages"></i> Перевод (RU)</span>
+            <p>Именно для этого мы и создали VUE.</p>
+            <p class="notes__field-en">EN: "That's exactly what VUE was built for."</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="eye"></i> Предложение визуала</span>
+            <p>Hero dashboard scene — макет интерфейса VUE на тёмном canvas. Сверху — KPI-полоса (3–4 крупных метрики). По центру — risk-timeline (12 месяцев, deadline маркеры). Снизу — building-list со sortable risk-колонкой. Glass-панели, sapphire акценты на цифрах, neon-mint signals для статусов.</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="lightbulb"></i> Brainstorm</span>
+            <ul class="notes__brainstorm">
+              <li><strong>А.</strong> Один большой dashboard-mockup (без раздробления) — показывает «вот ваше окно ясности».</li>
+              <li><strong>Б.</strong> Zoom-in на одно critical здание — детализация одной строки.</li>
+              <li><strong>В.</strong> Before/after pair — слева хаос (Slide 02), справа dashboard — внутри одного слайда.</li>
+            </ul>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="hash"></i> Reference search tags</span>
+            <div class="notes__tags">
+              <span class="notes__tag">dashboard-hero</span>
+              <span class="notes__tag">kpi-strip</span>
+              <span class="notes__tag">risk-timeline</span>
+              <span class="notes__tag">building-list</span>
+              <span class="notes__tag">glassmorphism-panel</span>
+              <span class="notes__tag">dark-saas-ui</span>
+              <span class="notes__tag notes__tag--mood">control-center</span>
+              <span class="notes__tag notes__tag--mood">command-cockpit</span>
+              <span class="notes__tag notes__tag--domain">ll97-tracker</span>
+              <span class="notes__tag notes__tag--domain">b2b-saas-dashboard</span>
+            </div>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="image-plus"></i> Refs</span>
+            <div class="notes__refs"><p class="notes__refs__empty">— drop &lt;img&gt; or &lt;iframe&gt; here</p></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- P2-S05 -->
+      <section class="slide-row" id="slide-2-5">
+        <div class="slide-row__label">
+          <span class="slide-row__label__num">P02 · S05</span>
+          <span class="slide-row__label__dot"></span>
+          <span>Know · Own</span>
+          <span class="slide-row__label__spec">1080 × 1350</span>
+        </div>
+        <article class="slide">
+          <div class="slide__chrome">
+            <div class="slide__chrome__post">Post 02 · 05 / 05</div>
+            <div>VUE</div>
+          </div>
+          <div class="slide__body" style="justify-content: center;">
+            <div class="slide__beats">
+              <p>Know your risk.</p>
+              <p>Own your compliance.</p>
+              <p>Enjoy the VUE. 🌆</p>
+            </div>
+          </div>
+          <div class="slide__brand-pin"><span class="pin-dot"></span><span class="pin-mark">VUE</span></div>
+          <div class="slide__hash">#EnjoyTheVUE</div>
+        </article>
+        <aside class="notes">
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="languages"></i> Перевод (RU)</span>
+            <p>Знай свой риск.<br>Владей соответствием.<br>Наслаждайтесь VUE. 🌆</p>
+            <p class="notes__field-en">EN: "Know your risk. Own your compliance. Enjoy the VUE. 🌆"</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="eye"></i> Предложение визуала</span>
+            <p>Three-beat manifesto. Каждая фраза на своей строке с accent-полосой слева (как Slide P01·S04, но цвета вариация: rose → amber → neon). Спокойный тёмный фон, без иллюстраций — только тип. Хэштег #EnjoyTheVUE как brand seal внизу.</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="lightbulb"></i> Brainstorm</span>
+            <ul class="notes__brainstorm">
+              <li><strong>А.</strong> Каждая фраза + тонкая Lucide-иконка (<code>shield-check</code>, <code>anchor</code>, <code>moon-star</code>).</li>
+              <li><strong>Б.</strong> Шрифт прогрессивно растёт по строкам — «Enjoy the VUE» самая крупная как кульминация.</li>
+              <li><strong>В.</strong> Финальная строка с эмодзи получает мини-skyline silhouette под ней — мост к Post 01·S05.</li>
+            </ul>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="hash"></i> Reference search tags</span>
+            <div class="notes__tags">
+              <span class="notes__tag">closing-manifesto</span>
+              <span class="notes__tag">three-beat-close</span>
+              <span class="notes__tag">tagline-stack</span>
+              <span class="notes__tag">brand-end-card</span>
+              <span class="notes__tag">accent-stripe</span>
+              <span class="notes__tag notes__tag--mood">calm-confidence</span>
+              <span class="notes__tag notes__tag--mood">premium-close</span>
+              <span class="notes__tag notes__tag--domain">campaign-finale</span>
+            </div>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="image-plus"></i> Refs</span>
+            <div class="notes__refs"><p class="notes__refs__empty">— drop &lt;img&gt; or &lt;iframe&gt; here</p></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- ════════════════════════════════════════════════════════════════
+           POST 03 — Feature Spotlight (Benchmarking / LL84)
+           ──────────────────────────────────────────────────────────── -->
+      <section class="post-header" id="post-3">
+        <span class="post-header__eyebrow">Post 03 · Feature Spotlight (LL84)</span>
+        <h2 class="post-header__title">From penalty notices to a real-time dashboard</h2>
+        <p class="post-header__sub">Concrete feature lead. Names LL84 (energy benchmarking), shows the product surface, lands on the promise: no more surprises.</p>
+        <div class="post-caption">
+          <div class="post-caption__label"><i data-lucide="message-square-quote"></i> Full client caption (LinkedIn post body)</div>
+          <div class="post-caption__body">
+            <p>Every large NYC building has to report its energy use annually under Local Law 84.</p>
+            <p>Most owners find out they missed something after the penalty notice arrives.</p>
+            <p>VUE gives property managers a real-time compliance dashboard — submission status, missing data flags, and benchmarking scores — across their entire portfolio, all in one place.</p>
+            <p>No more surprises. Just clarity.</p>
+            <p>Enjoy the VUE. 🌆</p>
+            <p class="post-caption__hashtags">#LL84 #EnergyBenchmarking #PortfolioManagement #NYCRealEstate #EnjoyTheVUE</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- P3-S01 -->
+      <section class="slide-row" id="slide-3-1">
+        <div class="slide-row__label">
+          <span class="slide-row__label__num">P03 · S01</span>
+          <span class="slide-row__label__dot"></span>
+          <span>Annual reporting</span>
+          <span class="slide-row__label__spec">1080 × 1350</span>
+        </div>
+        <article class="slide">
+          <div class="slide__chrome">
+            <div class="slide__chrome__post">Post 03 · 01 / 05</div>
+            <div>LL84</div>
+          </div>
+          <div class="slide__body">
+            <h2 class="slide__headline">Every large NYC building has to report its <em>energy use</em> annually.</h2>
+            <div class="slide__sub">Under Local Law 84 · &gt; 25,000 sq ft · annual benchmarking required.</div>
+          </div>
+          <div class="slide__brand-pin"><span class="pin-dot"></span><span class="pin-mark">VUE</span></div>
+          <div class="slide__hash">#LL84</div>
+        </article>
+        <aside class="notes">
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="languages"></i> Перевод (RU)</span>
+            <p>Каждое крупное здание в Нью-Йорке обязано ежегодно отчитываться об энергопотреблении.</p>
+            <p class="notes__field-en">EN: "Every large NYC building has to report its energy use annually under Local Law 84."</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="eye"></i> Предложение визуала</span>
+            <p>Statement type, акцент на «energy use». Под текстом — мелкая reference-полоса (LL84, scope, deadline) как regulatory footer. Возможна тонкая skyline silhouette в верхнем 30% слайда как atmospheric layer (10–15% opacity).</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="lightbulb"></i> Brainstorm</span>
+            <ul class="notes__brainstorm">
+              <li><strong>А.</strong> Number-callout: «10,000+ buildings under LL84» как опорный факт.</li>
+              <li><strong>Б.</strong> Form-filling visual: кадр Excel-cell с зелёным курсором — pre-state.</li>
+              <li><strong>В.</strong> Split: building-icon слева + form-icon справа, тонкая линия между ними.</li>
+            </ul>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="hash"></i> Reference search tags</span>
+            <div class="notes__tags">
+              <span class="notes__tag">regulatory-statement</span>
+              <span class="notes__tag">fact-slide</span>
+              <span class="notes__tag">law-reference</span>
+              <span class="notes__tag">italic-emphasis</span>
+              <span class="notes__tag notes__tag--mood">serious-editorial</span>
+              <span class="notes__tag notes__tag--mood">muted-canvas</span>
+              <span class="notes__tag notes__tag--domain">ll84-intro</span>
+              <span class="notes__tag notes__tag--domain">energy-compliance</span>
+            </div>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="image-plus"></i> Refs</span>
+            <div class="notes__refs"><p class="notes__refs__empty">— drop &lt;img&gt; or &lt;iframe&gt; here</p></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- P3-S02 -->
+      <section class="slide-row" id="slide-3-2">
+        <div class="slide-row__label">
+          <span class="slide-row__label__num">P03 · S02</span>
+          <span class="slide-row__label__dot"></span>
+          <span>Penalty notice</span>
+          <span class="slide-row__label__spec">1080 × 1350</span>
+        </div>
+        <article class="slide">
+          <div class="slide__chrome">
+            <div class="slide__chrome__post">Post 03 · 02 / 05</div>
+            <div>LL84</div>
+          </div>
+          <div class="slide__body">
+            <h2 class="slide__headline slide__headline--sm">Most owners find out after the <em>penalty notice</em> arrives.</h2>
+            <div class="slide__stub slide__stub--inline" style="margin-top: 40px;">
+              <div class="slide__stub__label"><i data-lucide="mail-warning"></i> Penalty notice mock</div>
+              <div class="slide__stub__desc">Government-style letter partially open: cold-paper texture, red banner "PENALTY NOTICE", small NYC DOB seal. Mock data, not real fines.</div>
+            </div>
+          </div>
+          <div class="slide__brand-pin"><span class="pin-dot"></span><span class="pin-mark">VUE</span></div>
+          <div class="slide__hash">#LL84</div>
+        </article>
+        <aside class="notes">
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="languages"></i> Перевод (RU)</span>
+            <p>Большинство владельцев узнают о пропуске после прихода уведомления о штрафе.</p>
+            <p class="notes__field-en">EN: "Most owners find out they missed something after the penalty notice arrives."</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="eye"></i> Предложение визуала</span>
+            <p>Mock конверта / письма «PENALTY NOTICE» в правом нижнем углу — cold-paper texture (выделяется на dark canvas). Красная шапка, NYC DOB-стилизованный seal. Подсветка sapphire под конвертом — намёк, что данные могли бы быть видны заранее.</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="lightbulb"></i> Brainstorm</span>
+            <ul class="notes__brainstorm">
+              <li><strong>А.</strong> Envelope partially open — драматическая композиция, тёмная подложка.</li>
+              <li><strong>Б.</strong> Tablet/phone с email-notification — современная версия «notice arrived».</li>
+              <li><strong>В.</strong> Stack of past unread notices — намёк на pattern, не первый раз.</li>
+            </ul>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="hash"></i> Reference search tags</span>
+            <div class="notes__tags">
+              <span class="notes__tag">penalty-notice</span>
+              <span class="notes__tag">envelope-mock</span>
+              <span class="notes__tag">government-letter</span>
+              <span class="notes__tag">cold-paper</span>
+              <span class="notes__tag">red-header-document</span>
+              <span class="notes__tag notes__tag--mood">regulatory-warning</span>
+              <span class="notes__tag notes__tag--mood">paper-on-dark</span>
+              <span class="notes__tag notes__tag--domain">compliance-letter</span>
+            </div>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="image-plus"></i> Refs</span>
+            <div class="notes__refs"><p class="notes__refs__empty">— drop &lt;img&gt; or &lt;iframe&gt; here</p></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- P3-S03 -->
+      <section class="slide-row" id="slide-3-3">
+        <div class="slide-row__label">
+          <span class="slide-row__label__num">P03 · S03</span>
+          <span class="slide-row__label__dot"></span>
+          <span>Real-time dashboard</span>
+          <span class="slide-row__label__spec">1080 × 1350</span>
+        </div>
+        <article class="slide">
+          <div class="slide__chrome">
+            <div class="slide__chrome__post">Post 03 · 03 / 05</div>
+            <div>LL84</div>
+          </div>
+          <div class="slide__body">
+            <h2 class="slide__headline slide__headline--sm">A <em>real-time compliance dashboard.</em></h2>
+            <div class="slide__sub">Submission status · missing-data flags · benchmarking scores. Whole portfolio, one place.</div>
+            <div class="slide__stub slide__stub--dashboard" style="margin-top: 40px;">
+              <div class="slide__stub__label"><i data-lucide="gauge"></i> Compliance dashboard mock</div>
+              <div class="slide__stub__desc">Three widgets in a row: (1) submission progress "23 / 28 submitted"; (2) missing-data alerts list; (3) ENERGY STAR score distribution chart.</div>
+            </div>
+          </div>
+          <div class="slide__brand-pin"><span class="pin-dot"></span><span class="pin-mark">VUE</span></div>
+          <div class="slide__hash">#LL84</div>
+        </article>
+        <aside class="notes">
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="languages"></i> Перевод (RU)</span>
+            <p>Дашборд соответствия в реальном времени — статус подачи, флаги пропущенных данных, скоры benchmarking. Весь портфель в одном месте.</p>
+            <p class="notes__field-en">EN: "VUE gives property managers a real-time compliance dashboard — submission status, missing data flags, and benchmarking scores — across their entire portfolio, all in one place."</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="eye"></i> Предложение визуала</span>
+            <p>Dashboard-mockup, разделённый на 3 widget'а. Hero-метрика: «23 / 28 submitted» крупно, прогресс-бар внизу. Middle: список buildings с missing-data flags (амбер-точки). Bottom: distribution chart по ENERGY STAR-скорам. Sapphire data, neon-mint для positive signals, amber для warnings.</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="lightbulb"></i> Brainstorm</span>
+            <ul class="notes__brainstorm">
+              <li><strong>А.</strong> Три widget'а друг под другом, hero-метрика сверху самая крупная.</li>
+              <li><strong>Б.</strong> Zoom-in на одно здание с открытым red flag — детализация.</li>
+              <li><strong>В.</strong> Timeline view: 12-месячная полоса с deadline-маркерами и progress.</li>
+            </ul>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="hash"></i> Reference search tags</span>
+            <div class="notes__tags">
+              <span class="notes__tag">dashboard-detail</span>
+              <span class="notes__tag">widget-stack</span>
+              <span class="notes__tag">progress-meter</span>
+              <span class="notes__tag">missing-data-flags</span>
+              <span class="notes__tag">benchmark-chart</span>
+              <span class="notes__tag">real-time-saas</span>
+              <span class="notes__tag notes__tag--mood">data-driven-calm</span>
+              <span class="notes__tag notes__tag--mood">cockpit-ui</span>
+              <span class="notes__tag notes__tag--domain">ll84-ui</span>
+              <span class="notes__tag notes__tag--domain">portfolio-tracking</span>
+            </div>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="image-plus"></i> Refs</span>
+            <div class="notes__refs"><p class="notes__refs__empty">— drop &lt;img&gt; or &lt;iframe&gt; here</p></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- P3-S04 -->
+      <section class="slide-row" id="slide-3-4">
+        <div class="slide-row__label">
+          <span class="slide-row__label__num">P03 · S04</span>
+          <span class="slide-row__label__dot"></span>
+          <span>Benchmarking scores</span>
+          <span class="slide-row__label__spec">1080 × 1350</span>
+        </div>
+        <article class="slide">
+          <div class="slide__chrome">
+            <div class="slide__chrome__post">Post 03 · 04 / 05</div>
+            <div>LL84</div>
+          </div>
+          <div class="slide__body">
+            <h2 class="slide__headline slide__headline--sm">Benchmarking scores across the <em>entire portfolio</em>.</h2>
+            <div class="slide__stub slide__stub--inline" style="margin-top: 40px;">
+              <div class="slide__stub__label"><i data-lucide="bar-chart-3"></i> Score strip + leaderboard</div>
+              <div class="slide__stub__desc">Top strip: 4 sample buildings with ENERGY STAR scores (89 · 67 · 45 · 92), color-coded. Below: distribution chart or leaderboard list.</div>
+            </div>
+          </div>
+          <div class="slide__brand-pin"><span class="pin-dot"></span><span class="pin-mark">VUE</span></div>
+          <div class="slide__hash">#LL84</div>
+        </article>
+        <aside class="notes">
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="languages"></i> Перевод (RU)</span>
+            <p>Скоры benchmarking по всему портфелю.</p>
+            <p class="notes__field-en">Derived from client copy: "...benchmarking scores — across their entire portfolio, all in one place."</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="eye"></i> Предложение визуала</span>
+            <p>Горизонтальная strip из 4 buildings: фото-thumbnail + адрес + крупный ENERGY STAR score (89 / 67 / 45 / 92), цветовая кодировка по диапазонам. Под strip — distribution chart по портфелю (gradient bar) или leaderboard top-N. Визуальный язык — finance/index dashboards.</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="lightbulb"></i> Brainstorm</span>
+            <ul class="notes__brainstorm">
+              <li><strong>А.</strong> Score-strip как лента финансовых тикеров — running portfolio status.</li>
+              <li><strong>Б.</strong> Distribution chart по всем 28 зданиям — gradient зелёный → амбер → красный.</li>
+              <li><strong>В.</strong> Leaderboard view: top-5 best performers + bottom-5 risk — competitive framing.</li>
+            </ul>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="hash"></i> Reference search tags</span>
+            <div class="notes__tags">
+              <span class="notes__tag">score-strip</span>
+              <span class="notes__tag">energy-star-display</span>
+              <span class="notes__tag">benchmark-chart</span>
+              <span class="notes__tag">leaderboard</span>
+              <span class="notes__tag">portfolio-distribution</span>
+              <span class="notes__tag">finance-ticker-style</span>
+              <span class="notes__tag notes__tag--mood">data-rich</span>
+              <span class="notes__tag notes__tag--mood">cool-ui</span>
+              <span class="notes__tag notes__tag--domain">benchmarking</span>
+              <span class="notes__tag notes__tag--domain">energy-star</span>
+            </div>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="image-plus"></i> Refs</span>
+            <div class="notes__refs"><p class="notes__refs__empty">— drop &lt;img&gt; or &lt;iframe&gt; here</p></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- P3-S05 -->
+      <section class="slide-row" id="slide-3-5">
+        <div class="slide-row__label">
+          <span class="slide-row__label__num">P03 · S05</span>
+          <span class="slide-row__label__dot"></span>
+          <span>No surprises · just clarity</span>
+          <span class="slide-row__label__spec">1080 × 1350</span>
+        </div>
+        <article class="slide">
+          <div class="slide__chrome">
+            <div class="slide__chrome__post">Post 03 · 05 / 05</div>
+            <div>VUE</div>
+          </div>
+          <div class="slide__body" style="justify-content: center;">
+            <div class="slide__beats">
+              <p>No more surprises.</p>
+              <p>Just clarity.</p>
+            </div>
+          </div>
+          <div class="slide__brand-pin"><span class="pin-dot"></span><span class="pin-mark">VUE</span></div>
+          <div class="slide__hash">#EnjoyTheVUE</div>
+        </article>
+        <aside class="notes">
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="languages"></i> Перевод (RU)</span>
+            <p>Никаких сюрпризов. Только ясность.</p>
+            <p class="notes__field-en">EN: "No more surprises. Just clarity."</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="eye"></i> Предложение визуала</span>
+            <p>Two-beat manifesto, спокойный dark canvas. «No more surprises» — амбер-полоса слева (warning-цвет затухает). «Just clarity» — неоновая полоса слева, тяжелее weight (the payoff). Generous negative space сверху и снизу.</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="lightbulb"></i> Brainstorm</span>
+            <ul class="notes__brainstorm">
+              <li><strong>А.</strong> Two-beat без визуала — pure type.</li>
+              <li><strong>Б.</strong> Lucide <code>eye</code> мелко между двумя строками как «aha»-момент.</li>
+              <li><strong>В.</strong> Tiny dashboard-fragment под текстом — proof of «clarity».</li>
+            </ul>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="hash"></i> Reference search tags</span>
+            <div class="notes__tags">
+              <span class="notes__tag">two-beat-close</span>
+              <span class="notes__tag">manifesto-end</span>
+              <span class="notes__tag">accent-stripe</span>
+              <span class="notes__tag">brand-payoff</span>
+              <span class="notes__tag notes__tag--mood">calm-resolution</span>
+              <span class="notes__tag notes__tag--mood">premium-close</span>
+              <span class="notes__tag notes__tag--domain">campaign-close</span>
+            </div>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="image-plus"></i> Refs</span>
+            <div class="notes__refs"><p class="notes__refs__empty">— drop &lt;img&gt; or &lt;iframe&gt; here</p></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- ════════════════════════════════════════════════════════════════
+           POST 04 — Social Proof / Narrative
+           ──────────────────────────────────────────────────────────── -->
+      <section class="post-header" id="post-4">
+        <span class="post-header__eyebrow">Post 04 · Social Proof / Narrative</span>
+        <h2 class="post-header__title">A property manager's two weeks · returned</h2>
+        <p class="post-header__sub">Story-driven post. Soft tone, persona-led. Demonstrates outcome through a single believable workflow change. Lands on the brand's purpose.</p>
+        <div class="post-caption">
+          <div class="post-caption__label"><i data-lucide="message-square-quote"></i> Full client caption (LinkedIn post body)</div>
+          <div class="post-caption__body">
+            <p>A property manager we work with used to spend the first two weeks of every year hunting down ENERGY STAR logins, chasing building engineers for meter data, and hoping nothing slipped through the cracks.</p>
+            <p>Last week, she opened VUE, saw her entire portfolio's compliance status in one screen, and spent that time on things that actually move the needle.</p>
+            <p>That's the whole idea.</p>
+            <p>Enjoy the VUE. 🌆</p>
+            <p class="post-caption__hashtags">#PropTech #NYCRealEstate #OperationalExcellence #EnergyCompliance #EnjoyTheVUE</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- P4-S01 -->
+      <section class="slide-row" id="slide-4-1">
+        <div class="slide-row__label">
+          <span class="slide-row__label__num">P04 · S01</span>
+          <span class="slide-row__label__dot"></span>
+          <span>Story open</span>
+          <span class="slide-row__label__spec">1080 × 1350</span>
+        </div>
+        <article class="slide">
+          <div class="slide__chrome">
+            <div class="slide__chrome__post">Post 04 · 01 / 05</div>
+            <div>Story</div>
+          </div>
+          <div class="slide__body">
+            <h2 class="slide__headline slide__headline--sm">Every January, the same <em>two weeks</em>.</h2>
+            <div class="slide__sub">A property manager we work with — hunting logins, chasing engineers, hoping nothing slipped through.</div>
+            <div class="slide__stub slide__stub--portrait" style="margin-top: 40px;">
+              <div class="slide__stub__label"><i data-lucide="user-square-2"></i> Editorial portrait</div>
+              <div class="slide__stub__desc">Soft black-and-white portrait of a property manager at her desk — focused, mid-action. Right-aligned 60%, copy fills left. Not stock-cliche — editorial framing.</div>
+            </div>
+          </div>
+          <div class="slide__brand-pin"><span class="pin-dot"></span><span class="pin-mark">VUE</span></div>
+          <div class="slide__hash">#PropTech</div>
+        </article>
+        <aside class="notes">
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="languages"></i> Перевод (RU)</span>
+            <p>Каждый январь — те же две недели.<br><br>Наша клиентка-управляющая раньше тратила первые две недели каждого года на охоту за логинами в ENERGY STAR, погоню за инженерами зданий и надежду, что ничего не упустит.</p>
+            <p class="notes__field-en">EN: "A property manager we work with used to spend the first two weeks of every year hunting down ENERGY STAR logins, chasing building engineers for meter data, and hoping nothing slipped through the cracks."</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="eye"></i> Предложение визуала</span>
+            <p>Editorial portrait persona-героя: soft B&amp;W фотография управляющей за столом. Composition: portrait справа на 60%, copy слева на 40%. Не stock — editorial framing с реальным desk-context (laptop, papers, plant). Hint of neon-mint в lighting (window glow).</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="lightbulb"></i> Brainstorm</span>
+            <ul class="notes__brainstorm">
+              <li><strong>А.</strong> Portrait справа + copy слева — классическая editorial-вёрстка.</li>
+              <li><strong>Б.</strong> Pure typography (без портрета) — позволяет читателю самому представить персонажа.</li>
+              <li><strong>В.</strong> Composition «over-the-shoulder»: руки за лаптопом, лицо не показываем — universal persona.</li>
+            </ul>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="hash"></i> Reference search tags</span>
+            <div class="notes__tags">
+              <span class="notes__tag">story-opening</span>
+              <span class="notes__tag">editorial-portrait</span>
+              <span class="notes__tag">persona-led</span>
+              <span class="notes__tag">black-and-white-portrait</span>
+              <span class="notes__tag">narrative-slide</span>
+              <span class="notes__tag notes__tag--mood">editorial-magazine</span>
+              <span class="notes__tag notes__tag--mood">human-warmth</span>
+              <span class="notes__tag notes__tag--domain">testimonial</span>
+              <span class="notes__tag notes__tag--domain">b2b-narrative</span>
+            </div>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="image-plus"></i> Refs</span>
+            <div class="notes__refs"><p class="notes__refs__empty">— drop &lt;img&gt; or &lt;iframe&gt; here</p></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- P4-S02 -->
+      <section class="slide-row" id="slide-4-2">
+        <div class="slide-row__label">
+          <span class="slide-row__label__num">P04 · S02</span>
+          <span class="slide-row__label__dot"></span>
+          <span>Manual workflows</span>
+          <span class="slide-row__label__spec">1080 × 1350</span>
+        </div>
+        <article class="slide">
+          <div class="slide__chrome">
+            <div class="slide__chrome__post">Post 04 · 02 / 05</div>
+            <div>Story</div>
+          </div>
+          <div class="slide__body">
+            <h2 class="slide__headline slide__headline--sm">ENERGY STAR. Building engineers. Hoping <em>nothing slipped</em>.</h2>
+            <div class="slide__stub slide__stub--inline" style="margin-top: 40px;">
+              <div class="slide__stub__label"><i data-lucide="files"></i> Workflow chaos</div>
+              <div class="slide__stub__desc">Desk detail: 20+ browser tabs at top, scattered sticky notes, phone with unread Slack/SMS. Wide-angle, slight tilt. Cold lighting.</div>
+            </div>
+          </div>
+          <div class="slide__brand-pin"><span class="pin-dot"></span><span class="pin-mark">VUE</span></div>
+          <div class="slide__hash">#PropTech</div>
+        </article>
+        <aside class="notes">
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="languages"></i> Перевод (RU)</span>
+            <p>ENERGY STAR. Инженеры зданий. Надежда, что ничего не пропустит.</p>
+            <p class="notes__field-en">Derived from client copy: "hunting down ENERGY STAR logins, chasing building engineers for meter data, and hoping nothing slipped through the cracks."</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="eye"></i> Предложение визуала</span>
+            <p>Desk-detail wide angle: 20+ browser tabs наверху, scattered sticky notes, phone с Slack-уведомлениями. Не сток — реальный desktop chaos. Cold lighting, монитор едва различим — пусть зритель почувствует «слишком много всего сразу».</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="lightbulb"></i> Brainstorm</span>
+            <ul class="notes__brainstorm">
+              <li><strong>А.</strong> 20+ browser tabs визуализация (как top-bar Chrome) — instant recognition.</li>
+              <li><strong>Б.</strong> Post-it wall фото — physical chaos.</li>
+              <li><strong>В.</strong> Timeline «Day 1 → Day 14» с задачами разбросанными — narrative структура.</li>
+            </ul>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="hash"></i> Reference search tags</span>
+            <div class="notes__tags">
+              <span class="notes__tag">workflow-chaos</span>
+              <span class="notes__tag">desk-detail</span>
+              <span class="notes__tag">tab-explosion</span>
+              <span class="notes__tag">sticky-note-collage</span>
+              <span class="notes__tag">manual-process</span>
+              <span class="notes__tag">pre-state</span>
+              <span class="notes__tag notes__tag--mood">cold-clinical</span>
+              <span class="notes__tag notes__tag--mood">documentary-style</span>
+              <span class="notes__tag notes__tag--domain">ops-chaos</span>
+            </div>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="image-plus"></i> Refs</span>
+            <div class="notes__refs"><p class="notes__refs__empty">— drop &lt;img&gt; or &lt;iframe&gt; here</p></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- P4-S03 -->
+      <section class="slide-row" id="slide-4-3">
+        <div class="slide-row__label">
+          <span class="slide-row__label__num">P04 · S03</span>
+          <span class="slide-row__label__dot"></span>
+          <span>One screen</span>
+          <span class="slide-row__label__spec">1080 × 1350</span>
+        </div>
+        <article class="slide">
+          <div class="slide__chrome">
+            <div class="slide__chrome__post">Post 04 · 03 / 05</div>
+            <div>Story</div>
+          </div>
+          <div class="slide__body">
+            <h2 class="slide__headline slide__headline--sm">Her entire portfolio's compliance status. <em>One screen.</em></h2>
+            <div class="slide__stub slide__stub--dashboard" style="margin-top: 40px;">
+              <div class="slide__stub__label"><i data-lucide="monitor"></i> Device + dashboard</div>
+              <div class="slide__stub__desc">Laptop or tablet mockup, slight 3/4 angle, VUE dashboard on screen. Sapphire glow under the device. Background — soft-blurred desk, warm ambient.</div>
+            </div>
+          </div>
+          <div class="slide__brand-pin"><span class="pin-dot"></span><span class="pin-mark">VUE</span></div>
+          <div class="slide__hash">#PropTech</div>
+        </article>
+        <aside class="notes">
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="languages"></i> Перевод (RU)</span>
+            <p>Весь её портфель — на одном экране.</p>
+            <p class="notes__field-en">EN: "...saw her entire portfolio's compliance status in one screen..."</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="eye"></i> Предложение визуала</span>
+            <p>Hero product shot — лаптоп или tablet на ¾, на экране VUE dashboard. Под устройством — sapphire glow / neon-mint reflection (premium feel). Фон — мягко-размытый desk, тёплый ambient свет. Контраст с Slide 02 (chaotic desk) — теперь всё calm.</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="lightbulb"></i> Brainstorm</span>
+            <ul class="notes__brainstorm">
+              <li><strong>А.</strong> Лаптоп ¾ с glow — премиум-эстетика.</li>
+              <li><strong>Б.</strong> Только экран (без device chrome) — full-bleed dashboard на слайде.</li>
+              <li><strong>В.</strong> Pan-over-shoulder: затылок персонажа, dashboard в фокусе.</li>
+            </ul>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="hash"></i> Reference search tags</span>
+            <div class="notes__tags">
+              <span class="notes__tag">device-mockup</span>
+              <span class="notes__tag">hero-product-shot</span>
+              <span class="notes__tag">laptop-dashboard</span>
+              <span class="notes__tag">over-the-shoulder</span>
+              <span class="notes__tag">after-state</span>
+              <span class="notes__tag">premium-glow</span>
+              <span class="notes__tag notes__tag--mood">calm-ui</span>
+              <span class="notes__tag notes__tag--mood">cinematic-product</span>
+              <span class="notes__tag notes__tag--domain">b2b-saas-shot</span>
+            </div>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="image-plus"></i> Refs</span>
+            <div class="notes__refs"><p class="notes__refs__empty">— drop &lt;img&gt; or &lt;iframe&gt; here</p></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- P4-S04 -->
+      <section class="slide-row" id="slide-4-4">
+        <div class="slide-row__label">
+          <span class="slide-row__label__num">P04 · S04</span>
+          <span class="slide-row__label__dot"></span>
+          <span>Operational relief</span>
+          <span class="slide-row__label__spec">1080 × 1350</span>
+        </div>
+        <article class="slide">
+          <div class="slide__chrome">
+            <div class="slide__chrome__post">Post 04 · 04 / 05</div>
+            <div>Story</div>
+          </div>
+          <div class="slide__body">
+            <h2 class="slide__headline slide__headline--sm">…and spent that time on things that <em>actually move the needle</em>.</h2>
+            <div class="slide__stub slide__stub--portrait" style="margin-top: 40px;">
+              <div class="slide__stub__label"><i data-lucide="coffee"></i> Calm workspace</div>
+              <div class="slide__stub__desc">Same persona, different beat: notebook open with handwritten priorities, coffee, plant, window light. Wide-angle composition. Negative space.</div>
+            </div>
+          </div>
+          <div class="slide__brand-pin"><span class="pin-dot"></span><span class="pin-mark">VUE</span></div>
+          <div class="slide__hash">#PropTech</div>
+        </article>
+        <aside class="notes">
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="languages"></i> Перевод (RU)</span>
+            <p>…а время потратила на то, что действительно двигает дело вперёд.</p>
+            <p class="notes__field-en">EN: "...spent that time on things that actually move the needle."</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="eye"></i> Предложение визуала</span>
+            <p>Calm workspace — после-сцена для нашей героини. Notebook с handwritten priorities, кофе, растение, окно — мягкий natural light. Wide-angle с intentional negative space. Намекает на «эта реальная работа стала возможна, потому что compliance больше не съедает время».</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="lightbulb"></i> Brainstorm</span>
+            <ul class="notes__brainstorm">
+              <li><strong>А.</strong> Open desk wide-angle — calm, intentional, after-state.</li>
+              <li><strong>Б.</strong> Heroine walking к coffee у окна с skyline-view — narrative motion.</li>
+              <li><strong>В.</strong> Только notebook с handwritten приоритетами — type-led, минимализм.</li>
+            </ul>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="hash"></i> Reference search tags</span>
+            <div class="notes__tags">
+              <span class="notes__tag">calm-workspace</span>
+              <span class="notes__tag">after-state</span>
+              <span class="notes__tag">lifestyle-shot</span>
+              <span class="notes__tag">narrative-beat</span>
+              <span class="notes__tag">notebook-detail</span>
+              <span class="notes__tag notes__tag--mood">warm-natural</span>
+              <span class="notes__tag notes__tag--mood">intentional-quiet</span>
+              <span class="notes__tag notes__tag--domain">productivity-narrative</span>
+            </div>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="image-plus"></i> Refs</span>
+            <div class="notes__refs"><p class="notes__refs__empty">— drop &lt;img&gt; or &lt;iframe&gt; here</p></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- P4-S05 -->
+      <section class="slide-row" id="slide-4-5">
+        <div class="slide-row__label">
+          <span class="slide-row__label__num">P04 · S05</span>
+          <span class="slide-row__label__dot"></span>
+          <span>That's the whole idea</span>
+          <span class="slide-row__label__spec">1080 × 1350</span>
+        </div>
+        <article class="slide">
+          <div class="slide__chrome">
+            <div class="slide__chrome__post">Post 04 · 05 / 05</div>
+            <div>VUE</div>
+          </div>
+          <div class="slide__body" style="justify-content: center;">
+            <h2 class="slide__headline" style="text-align:center;">That's the <em>whole</em> idea.</h2>
+            <div class="slide__sub" style="text-align:center; margin: 28px auto 0;">Enjoy the VUE. 🌆</div>
+          </div>
+          <div class="slide__brand-pin"><span class="pin-dot"></span><span class="pin-mark">VUE</span></div>
+          <div class="slide__hash">#EnjoyTheVUE</div>
+        </article>
+        <aside class="notes">
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="languages"></i> Перевод (RU)</span>
+            <p>В этом вся идея.<br><br>Наслаждайтесь VUE. 🌆</p>
+            <p class="notes__field-en">EN: "That's the whole idea. Enjoy the VUE. 🌆"</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="eye"></i> Предложение визуала</span>
+            <p>Center-aligned statement, без визуала. Quiet close после story-arc. Под основной фразой — small «Enjoy the VUE. 🌆» как tagline-sigh. Максимальный negative space — даёт фразе «вес».</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="lightbulb"></i> Brainstorm</span>
+            <ul class="notes__brainstorm">
+              <li><strong>А.</strong> Center type, ample air — quiet close.</li>
+              <li><strong>Б.</strong> Тонкая skyline silhouette внизу — атмосферный bridge к Post 05.</li>
+              <li><strong>В.</strong> Wordmark VUE крупнее taglinе — brand stamp.</li>
+            </ul>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="hash"></i> Reference search tags</span>
+            <div class="notes__tags">
+              <span class="notes__tag">closing-line</span>
+              <span class="notes__tag">statement-only</span>
+              <span class="notes__tag">quiet-close</span>
+              <span class="notes__tag">centered-type</span>
+              <span class="notes__tag notes__tag--mood">manifesto-quiet</span>
+              <span class="notes__tag notes__tag--mood">narrative-resolution</span>
+              <span class="notes__tag notes__tag--domain">brand-tagline</span>
+            </div>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="image-plus"></i> Refs</span>
+            <div class="notes__refs"><p class="notes__refs__empty">— drop &lt;img&gt; or &lt;iframe&gt; here</p></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- ════════════════════════════════════════════════════════════════
+           POST 05 — Vision / Big Picture
+           ──────────────────────────────────────────────────────────── -->
+      <section class="post-header" id="post-5">
+        <span class="post-header__eyebrow">Post 05 · Vision / Big Picture</span>
+        <h2 class="post-header__title">The laws aren't going away — visibility wins</h2>
+        <p class="post-header__sub">Macro framing. Names the full regulatory landscape (LL84/97/87/133). Positions VUE as the strategic answer for owners who play the long game.</p>
+        <div class="post-caption">
+          <div class="post-caption__label"><i data-lucide="message-square-quote"></i> Full client caption (LinkedIn post body)</div>
+          <div class="post-caption__body">
+            <p>NYC's building performance laws aren't going away. They're getting stricter.</p>
+            <p>LL84. LL97. LL87. LL133. The list grows. The deadlines tighten. The fines compound.</p>
+            <p>The owners who will come out ahead aren't the ones who scramble every spring. They're the ones who have a clear, year-round view of where they stand.</p>
+            <p>That's why we built VUE.</p>
+            <p>Your portfolio. Your compliance. Your power.</p>
+            <p>Enjoy the VUE. 🌆</p>
+            <p class="post-caption__hashtags">#NYCLocalLaw #BuildingPerformance #LL97 #LL84 #RealEstate #Sustainability #EnjoyTheVUE</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- P5-S01 -->
+      <section class="slide-row" id="slide-5-1">
+        <div class="slide-row__label">
+          <span class="slide-row__label__num">P05 · S01</span>
+          <span class="slide-row__label__dot"></span>
+          <span>Laws aren't going away</span>
+          <span class="slide-row__label__spec">1080 × 1350</span>
+        </div>
+        <article class="slide">
+          <div class="slide__chrome">
+            <div class="slide__chrome__post">Post 05 · 01 / 05</div>
+            <div>Vision</div>
+          </div>
+          <div class="slide__body">
+            <div class="slide__stub slide__stub--media">
+              <div class="slide__stub__label"><i data-lucide="building-2"></i> Cinematic skyline</div>
+              <div class="slide__stub__desc">Manhattan skyline, low angle, looking up at City Hall or DOB government building. Dramatic sky — stormy or pre-dawn. Sense of permanence.</div>
+            </div>
+            <h2 class="slide__headline">NYC's <em>building performance laws</em> aren't going away.</h2>
+          </div>
+          <div class="slide__brand-pin"><span class="pin-dot"></span><span class="pin-mark">VUE</span></div>
+          <div class="slide__hash">#NYCLocalLaw</div>
+        </article>
+        <aside class="notes">
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="languages"></i> Перевод (RU)</span>
+            <p>Законы Нью-Йорка о производительности зданий никуда не денутся.</p>
+            <p class="notes__field-en">EN: "NYC's building performance laws aren't going away."</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="eye"></i> Предложение визуала</span>
+            <p>Кинематографичный shot Манхэттена с low angle — взгляд снизу на City Hall или Department of Buildings. Stormy sky или pre-dawn — ощущение веса и постоянства. Editorial-заголовок overlay снизу, italic на «building performance laws».</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="lightbulb"></i> Brainstorm</span>
+            <ul class="notes__brainstorm">
+              <li><strong>А.</strong> Government building snapshot — institutional permanence.</li>
+              <li><strong>Б.</strong> Granite/marble building close-up — material gravitas.</li>
+              <li><strong>В.</strong> Cityscape с weather drama — мощь природы как метафора неизбежности.</li>
+            </ul>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="hash"></i> Reference search tags</span>
+            <div class="notes__tags">
+              <span class="notes__tag">cinematic-skyline</span>
+              <span class="notes__tag">low-angle-architecture</span>
+              <span class="notes__tag">government-building</span>
+              <span class="notes__tag">dramatic-sky</span>
+              <span class="notes__tag">editorial-overlay</span>
+              <span class="notes__tag notes__tag--mood">institutional-gravitas</span>
+              <span class="notes__tag notes__tag--mood">cinematic-serious</span>
+              <span class="notes__tag notes__tag--domain">regulation-permanence</span>
+              <span class="notes__tag notes__tag--domain">nyc-architecture</span>
+            </div>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="image-plus"></i> Refs</span>
+            <div class="notes__refs"><p class="notes__refs__empty">— drop &lt;img&gt; or &lt;iframe&gt; here</p></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- P5-S02 -->
+      <section class="slide-row" id="slide-5-2">
+        <div class="slide-row__label">
+          <span class="slide-row__label__num">P05 · S02</span>
+          <span class="slide-row__label__dot"></span>
+          <span>LL84 · 97 · 87 · 133</span>
+          <span class="slide-row__label__spec">1080 × 1350</span>
+        </div>
+        <article class="slide">
+          <div class="slide__chrome">
+            <div class="slide__chrome__post">Post 05 · 02 / 05</div>
+            <div>Vision</div>
+          </div>
+          <div class="slide__body">
+            <h2 class="slide__headline slide__headline--sm">The list <em>grows</em>.</h2>
+            <div class="slide__code-list">
+              <div class="slide__code-list__item">
+                <span class="slide__code-list__code">LL84</span>
+                <span class="slide__code-list__desc">Annual energy + water benchmarking</span>
+              </div>
+              <div class="slide__code-list__item">
+                <span class="slide__code-list__code">LL97</span>
+                <span class="slide__code-list__desc">Carbon emission limits + escalating fines</span>
+              </div>
+              <div class="slide__code-list__item">
+                <span class="slide__code-list__code">LL87</span>
+                <span class="slide__code-list__desc">Energy audits + retro-commissioning</span>
+              </div>
+              <div class="slide__code-list__item">
+                <span class="slide__code-list__code">LL133</span>
+                <span class="slide__code-list__desc">Building data disclosure</span>
+              </div>
+            </div>
+          </div>
+          <div class="slide__brand-pin"><span class="pin-dot"></span><span class="pin-mark">VUE</span></div>
+          <div class="slide__hash">#BuildingPerformance</div>
+        </article>
+        <aside class="notes">
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="languages"></i> Перевод (RU)</span>
+            <p>LL84. LL97. LL87. LL133. Список растёт. Дедлайны ужесточаются. Штрафы накапливаются.</p>
+            <p class="notes__field-en">EN: "LL84. LL97. LL87. LL133. The list grows. The deadlines tighten. The fines compound."</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="eye"></i> Предложение визуала</span>
+            <p>Editorial contents-page стиль: четыре закона как display codes слева (84 / 97 / 87 / 133), neon-mint glow. Справа — короткая description каждого. Like a table of contents from a serious document.</p>
+            <p>Опциональный эффект: weight прогрессирует от LL84 (thin) к LL133 (heavy) — визуальная эскалация.</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="lightbulb"></i> Brainstorm</span>
+            <ul class="notes__brainstorm">
+              <li><strong>А.</strong> Editorial list (как сейчас) — directory-style.</li>
+              <li><strong>Б.</strong> Vertical stack: каждый код с растущим weight — visual escalation.</li>
+              <li><strong>В.</strong> Matrix с deadline-колонкой и fine-impact range.</li>
+            </ul>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="hash"></i> Reference search tags</span>
+            <div class="notes__tags">
+              <span class="notes__tag">regulation-list</span>
+              <span class="notes__tag">code-callouts</span>
+              <span class="notes__tag">editorial-toc</span>
+              <span class="notes__tag">stacked-display</span>
+              <span class="notes__tag">escalation-visual</span>
+              <span class="notes__tag notes__tag--mood">reference-document</span>
+              <span class="notes__tag notes__tag--mood">institutional</span>
+              <span class="notes__tag notes__tag--domain">nyc-local-laws</span>
+              <span class="notes__tag notes__tag--domain">compliance-landscape</span>
+            </div>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="image-plus"></i> Refs</span>
+            <div class="notes__refs"><p class="notes__refs__empty">— drop &lt;img&gt; or &lt;iframe&gt; here</p></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- P5-S03 -->
+      <section class="slide-row" id="slide-5-3">
+        <div class="slide-row__label">
+          <span class="slide-row__label__num">P05 · S03</span>
+          <span class="slide-row__label__dot"></span>
+          <span>Year-round view</span>
+          <span class="slide-row__label__spec">1080 × 1350</span>
+        </div>
+        <article class="slide">
+          <div class="slide__chrome">
+            <div class="slide__chrome__post">Post 05 · 03 / 05</div>
+            <div>Vision</div>
+          </div>
+          <div class="slide__body">
+            <h2 class="slide__headline slide__headline--sm">The owners who come out ahead have a clear, <em>year-round</em> view.</h2>
+            <div class="slide__stub slide__stub--inline" style="margin-top: 40px;">
+              <div class="slide__stub__label"><i data-lucide="calendar-range"></i> Year-round timeline</div>
+              <div class="slide__stub__desc">12-month horizontal band with status markers across the year. Calm sapphire baseline, neon-mint deadline pins.</div>
+            </div>
+          </div>
+          <div class="slide__brand-pin"><span class="pin-dot"></span><span class="pin-mark">VUE</span></div>
+          <div class="slide__hash">#BuildingPerformance</div>
+        </article>
+        <aside class="notes">
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="languages"></i> Перевод (RU)</span>
+            <p>Владельцы, которые выигрывают, имеют чёткий круглогодичный обзор своего положения.</p>
+            <p class="notes__field-en">EN: "The owners who will come out ahead are the ones who have a clear, year-round view of where they stand."</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="eye"></i> Предложение визуала</span>
+            <p>12-месячная горизонтальная timeline-полоса с deadline-маркерами и status-индикаторами. Calm sapphire baseline, neon-mint pins на ключевых датах. Не stressful, а strategic. Заголовок над timeline, italic на «year-round».</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="lightbulb"></i> Brainstorm</span>
+            <ul class="notes__brainstorm">
+              <li><strong>А.</strong> 12-month band с deadline-markers — calm strategic-view.</li>
+              <li><strong>Б.</strong> Графа trending toward green — improvement narrative.</li>
+              <li><strong>В.</strong> Portfolio-overview с health-timeline per building (mini-chart) — granular view.</li>
+            </ul>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="hash"></i> Reference search tags</span>
+            <div class="notes__tags">
+              <span class="notes__tag">year-timeline</span>
+              <span class="notes__tag">12-month-strip</span>
+              <span class="notes__tag">longitudinal-view</span>
+              <span class="notes__tag">deadline-markers</span>
+              <span class="notes__tag">calendar-strip</span>
+              <span class="notes__tag">strategic-overview</span>
+              <span class="notes__tag notes__tag--mood">calm-strategic</span>
+              <span class="notes__tag notes__tag--mood">data-storytelling</span>
+              <span class="notes__tag notes__tag--domain">compliance-calendar</span>
+            </div>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="image-plus"></i> Refs</span>
+            <div class="notes__refs"><p class="notes__refs__empty">— drop &lt;img&gt; or &lt;iframe&gt; here</p></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- P5-S04 -->
+      <section class="slide-row" id="slide-5-4">
+        <div class="slide-row__label">
+          <span class="slide-row__label__num">P05 · S04</span>
+          <span class="slide-row__label__dot"></span>
+          <span>Operational oversight</span>
+          <span class="slide-row__label__spec">1080 × 1350</span>
+        </div>
+        <article class="slide">
+          <div class="slide__chrome">
+            <div class="slide__chrome__post">Post 05 · 04 / 05</div>
+            <div>Vision</div>
+          </div>
+          <div class="slide__body">
+            <h2 class="slide__headline slide__headline--sm">That's why we built <em>VUE</em>.</h2>
+            <div class="slide__sub">Year-round operational oversight. Built for owners who play the long game.</div>
+            <div class="slide__stub slide__stub--dashboard" style="margin-top: 40px;">
+              <div class="slide__stub__label"><i data-lucide="radar"></i> Command-center dashboard</div>
+              <div class="slide__stub__desc">Full-bleed dashboard: portfolio map, year calendar with deadline pins, real-time risk feed. War-room aesthetic. Heavy use of neon-mint signal accents.</div>
+            </div>
+          </div>
+          <div class="slide__brand-pin"><span class="pin-dot"></span><span class="pin-mark">VUE</span></div>
+          <div class="slide__hash">#BuildingPerformance</div>
+        </article>
+        <aside class="notes">
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="languages"></i> Перевод (RU)</span>
+            <p>Именно для этого мы создали VUE.<br><br>Круглогодичный операционный контроль для тех, кто играет в долгую.</p>
+            <p class="notes__field-en">EN: "That's why we built VUE." + derived "Year-round operational oversight."</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="eye"></i> Предложение визуала</span>
+            <p>Command-center scene: full-bleed dashboard, видны несколько секций сразу — портфельная карта, year-calendar с deadline-pins, risk-feed. War-room aesthetic. Heavy neon-mint signal accents, но композиция calm (не overwhelming).</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="lightbulb"></i> Brainstorm</span>
+            <ul class="notes__brainstorm">
+              <li><strong>А.</strong> Calendar 2026 с deadline-маркерами — год в одном экране.</li>
+              <li><strong>Б.</strong> Portfolio-grid + monthly drill-down — два уровня в одном слайде.</li>
+              <li><strong>В.</strong> Control-room/war-room aesthetic — multiple panels, dark theatre lighting.</li>
+            </ul>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="hash"></i> Reference search tags</span>
+            <div class="notes__tags">
+              <span class="notes__tag">command-center</span>
+              <span class="notes__tag">war-room-dashboard</span>
+              <span class="notes__tag">full-bleed-ui</span>
+              <span class="notes__tag">multi-panel</span>
+              <span class="notes__tag">year-calendar</span>
+              <span class="notes__tag">risk-feed</span>
+              <span class="notes__tag notes__tag--mood">strategic-cockpit</span>
+              <span class="notes__tag notes__tag--mood">premium-saas</span>
+              <span class="notes__tag notes__tag--domain">ops-oversight</span>
+              <span class="notes__tag notes__tag--domain">portfolio-platform</span>
+            </div>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="image-plus"></i> Refs</span>
+            <div class="notes__refs"><p class="notes__refs__empty">— drop &lt;img&gt; or &lt;iframe&gt; here</p></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- P5-S05 -->
+      <section class="slide-row" id="slide-5-5">
+        <div class="slide-row__label">
+          <span class="slide-row__label__num">P05 · S05</span>
+          <span class="slide-row__label__dot"></span>
+          <span>Your portfolio · compliance · power</span>
+          <span class="slide-row__label__spec">1080 × 1350</span>
+        </div>
+        <article class="slide">
+          <div class="slide__chrome">
+            <div class="slide__chrome__post">Post 05 · 05 / 05</div>
+            <div>VUE</div>
+          </div>
+          <div class="slide__body" style="justify-content: center;">
+            <div class="slide__beats">
+              <p>Your portfolio.</p>
+              <p>Your compliance.</p>
+              <p>Your power.</p>
+            </div>
+            <div class="slide__sub" style="margin-top: 56px;">Enjoy the VUE. 🌆</div>
+          </div>
+          <div class="slide__brand-pin"><span class="pin-dot"></span><span class="pin-mark">VUE</span></div>
+          <div class="slide__hash">#EnjoyTheVUE</div>
+        </article>
+        <aside class="notes">
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="languages"></i> Перевод (RU)</span>
+            <p>Ваш портфель.<br>Ваше соответствие.<br>Ваша сила.<br><br>Наслаждайтесь VUE. 🌆</p>
+            <p class="notes__field-en">EN: "Your portfolio. Your compliance. Your power. Enjoy the VUE. 🌆"</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="eye"></i> Предложение визуала</span>
+            <p>Manifesto-close — three-beat с accent-stripes (neon → jade → mute → выходит во вспышку «power»). Под манифестом — atmospheric NYC skyline at dusk silhouette (low opacity 25%). Tagline-sigh «Enjoy the VUE» как brand seal.</p>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="lightbulb"></i> Brainstorm</span>
+            <ul class="notes__brainstorm">
+              <li><strong>А.</strong> Three-beat manifest с растущим weight — Crescendo к «Your power».</li>
+              <li><strong>Б.</strong> Single-line variant: «Your portfolio. Your compliance. Your power.» в одной строке с тонкими separators.</li>
+              <li><strong>В.</strong> Empowered-owner shot: силуэт у окна, NYC skyline через стекло — narrative bookend.</li>
+            </ul>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="hash"></i> Reference search tags</span>
+            <div class="notes__tags">
+              <span class="notes__tag">manifesto-close</span>
+              <span class="notes__tag">three-beat-finale</span>
+              <span class="notes__tag">brand-end-card</span>
+              <span class="notes__tag">accent-stripe</span>
+              <span class="notes__tag">skyline-dusk-overlay</span>
+              <span class="notes__tag notes__tag--mood">empowering-close</span>
+              <span class="notes__tag notes__tag--mood">premium-finale</span>
+              <span class="notes__tag notes__tag--mood">brand-crescendo</span>
+              <span class="notes__tag notes__tag--domain">campaign-finale</span>
+            </div>
+          </div>
+          <div class="notes__field">
+            <span class="notes__field-label"><i data-lucide="image-plus"></i> Refs</span>
+            <div class="notes__refs"><p class="notes__refs__empty">— drop &lt;img&gt; or &lt;iframe&gt; here</p></div>
+          </div>
+        </aside>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<!-- Lucide icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  if (window.lucide) lucide.createIcons();
+</script>
+
+<!-- Active-slide highlight in left nav -->
+<script>
+(function () {
+  const links = document.querySelectorAll('.slide-nav__link');
+  const slides = Array.from(links)
+    .map(a => ({ link: a, target: document.querySelector(a.getAttribute('href')) }))
+    .filter(x => x.target);
+
+  function onScroll() {
+    const y = window.scrollY + window.innerHeight * 0.35;
+    let active = slides[0];
+    for (const s of slides) {
+      if (s.target.offsetTop <= y) active = s;
+    }
+    links.forEach(l => l.classList.remove('is-active'));
+    if (active) active.link.classList.add('is-active');
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('load', onScroll);
+})();
+</script>
+
+<script defer src="../shared/service-menu.js"></script>
+</body>
+</html>
